@@ -1,0 +1,134 @@
+/* Este arquivo esta responsável por estilizar carregar as principais cores, fontes, nav e footer*/
+
+*, 
+*:after,
+*:before,a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+body{
+    font-size: 20px;
+    list-style-type: none;
+    
+}
+:root{
+    --bgColor1:#d6d3d1;
+    --bgColor2:#292524;
+    --hlColor1:#facc15;
+}
+
+body{
+    background-color: var(--bgColor1);
+}
+/* header e nav */
+header {
+    display: flex;
+    font-family: "Josefin Sans", sans-serif;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    background-color: var(--bgColor2);
+    width: 100%;
+    height: 84px;
+    padding: 20px 12px;
+}
+
+header .logo {
+    margin-right: auto; 
+    color: var(--bgColor1);
+    font-size: 1.5em; 
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    flex: 1; 
+    justify-content: center;
+}
+
+.searchInput {
+    width: 400px; 
+    height: 42px;
+    padding-right: 40px; 
+    border-radius: 35px;
+    border: solid 1px var(--bgColor1); 
+    font-size: 1em;
+}
+
+.searchBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.searchBtn i {
+    font-size: 1.2rem;
+    color: var(--bgColor2);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+}
+
+.header-right a, .header-right button {
+    color: var(--bgColor1);
+    font-size: 1em;
+    margin-left: 20px; 
+}
+
+header .menu {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+}
+
+.bi {
+    color: var(--bgColor1);
+}
+
+.bi-search {
+    font-size: 1.2em; 
+    color: var(--bgColor2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .searchInput {
+        width: 200px; 
+    }
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .header-right {
+        margin-left: 0;
+        margin-top: 10px; 
+    }
+}
+
+/* conteudo da pagina principal */
+.cardTeste{
+    min-width: 200px;
+    min-height: 22000px;
+    max-width: 260px;
+    max-height: 20000px;
+    border-radius: 0px 25px;
+    background-color: var(--hlColor1);
+    /* display: none; */
+}
+
+
