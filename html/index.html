@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Projeto MDBootstrap</title>
+    <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container-fluid justify-content-between">
+                <div class="d-flex">
+                    <button class="btn-sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="logo">
+                        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#"><img src="/images/logo.png"
+                                loading="lazy" alt="Logo" /></a>
+                        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">Mistergold</a>
+                    </div>
+                </div>
+                <div class="d-flex search-bar align-items-center">
+                    <form class="input-group w-auto my-auto d-none d-sm-flex">
+                        <input type="search" class="form-control rounded" placeholder="Buscar produtos.." />
+                        <span class="input-group-text border-0 d-none d-lg-flex">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </form>
+                </div>
+                <div class="icons d-flex align-items-center">
+                    <button aria-label="Carrinho">
+                        <i class="fa-solid fa-cart-shopping"></i><span>Carrinho</span>
+                    </button>
+                    <button aria-label="Conta">
+                        <i class="fa-solid fa-user"></i><span>Conta</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="p-5 text-center bg-image" style="background-image: url('/images/hero.jpg'); height: 600px">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                        <h1 class="mb-3">Bem-vindo ao Mistergold</h1>
+                        <h4 class="mb-3">
+                            Seu destino para as melhores ofertas e produtos!
+                        </h4>
+                        <button type="button" class="btn btn-rounded" data-mdb-ripple-init data-mdb-ripple-color="dark">
+                            Ver Produtos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Conteúdo Principal -->
+        <section class="container">
+            <div class="mb-10 text-center">
+                <h2 class="fw-bold mb-7 text-center">Produtos</h2>
+
+                <div class="row gx-lg-5" id="card-container">
+                    <!-- First column -->
+                 
+                    <!-- First column -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="
+        background-color: var(--bgColor2);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      ">
+        <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
+        <div>
+            <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
+            <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
+        </div>
+    </footer>
+
+    <script src="../node_modules/mdb-ui-kit/js/mdb.min.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
