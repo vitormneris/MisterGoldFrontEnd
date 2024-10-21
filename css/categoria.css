@@ -1,23 +1,4 @@
-.title_container{
-    display: flex;
-    justify-content: center;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    flex-direction:column;
-    align-items:center;
-}
 
-.page_title{
-    text-align: center;
-    color: var(--bgColor2);
-}
-
-.title_line{
-	height:4px;
-	width:30%;
-	background-color: var(--bgColor2);
-    border-radius: 35px;
-}
 
 .categories_container{
     /* max-width: 1080px; */
@@ -76,5 +57,12 @@
     height: 4px;
     width: 55%;
     background-color: var(--bgColor2);
+    border-radius: 35px;
+}
+
+.category_line_alt{
+    height: 4px;
+    width: 100%;
+    background-color: var(--bgColor1);
     border-radius: 35px;
 }

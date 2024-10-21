@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Projeto MDBootstrap</title>
+    <title>Mistergold</title>
     <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
@@ -48,6 +48,9 @@
         <!-- Navbar -->
     </header>
 
+        <aside class="sidebar">
+
+        </aside>
     <main>
         <!-- Seção Hero -->
         <section class="p-5 text-center bg-image" style="background-image: url('/images/hero.jpg'); height: 600px">
@@ -58,7 +61,7 @@
                         <h4 class="mb-3">
                             Seu destino para as melhores ofertas e produtos!
                         </h4>
-                        <button type="button" class="btn btn-rounded" data-mdb-ripple-init data-mdb-ripple-color="dark">
+                        <button type="button" onclick="window.location.href='/html/products.html'" class="btn btn-rounded" data-mdb-ripple-init data-mdb-ripple-color="dark">
                             Ver Produtos
                         </button>
                     </div>
@@ -77,7 +80,6 @@
               <!-- Aqui vai o codigo do card de categorias -->
             </div>
         </div>
-
         <div class="title_container">
             <h1 class="page_title">Produtos</h1>
             <div class="title_line" aling="center"></div>
@@ -89,19 +91,14 @@
 
                 <div class="row gx-lg-5" id="card-container">
                     <!-- First column -->
-                 
+                   
                     <!-- First column -->
                 </div>
             </div>
         </section>
     </main>
 
-    <footer style="
-        background-color: var(--bgColor2);
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-      ">
+    <footer>
         <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
         <div>
             <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>

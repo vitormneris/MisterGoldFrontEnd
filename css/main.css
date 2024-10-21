@@ -4,6 +4,7 @@
 :root {
     --bgColor1: #d6d3d1; 
     --bgColor2: #292524; 
+    --bgColor3: #94a3b8;
     --hlColor1: #facc15; 
     font-family: "Poppins", sans-serif;
 }
@@ -78,4 +79,53 @@ button:hover {
     margin: auto; 
     border-radius: 12px; 
     border: 1px solid var(--bgColor2); 
+}
+
+/* estilo dos card de produtos */
+.card{
+    background-color: var(--bgColor2);
+}
+.img-fluid{
+    padding: 16px;
+    border-radius: 24px;
+}
+.card-title{
+    color: var(--bgColor1);
+}
+.product-price-cash{
+    color: var(--hlColor1);
+    margin-top: 16px;
+}
+.product-price-card{
+    color: #9ca3af;
+}
+.title_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    flex-direction:column;
+    align-items:center;
+}
+
+.page_title{
+    text-align: center;
+    color: var(--bgColor2);
+}
+
+.title_line{
+	height:4px;
+	width:30%;
+	background-color: var(--bgColor2);
+    border-radius: 35px;
+}
+.marginTop{
+    margin-top: 10vh;
+}
+footer{
+background-color: var(--bgColor2);
+color: #fff;
+padding: 20px;
+text-align: center;
+margin-top:20vh;
 }

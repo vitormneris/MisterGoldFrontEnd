@@ -1,6 +1,4 @@
-.hero{
-    background: url('/images/hero.jpg') no-repeat center center; background-size: cover; height: 400px; display: flex; align-items: center; justify-content: center;
-}
+
 .btn-rounded{
     background-color: var(--bgColor2);
     color: var(--hlColor1);
@@ -12,7 +10,3 @@
 .btn-rounded:active{
     --mdb-btn-active-border-color: var(--bgColor2);
 }
-.degrade{
-    background-color: rgba(250, 204, 21, 0.15)
-}
-
