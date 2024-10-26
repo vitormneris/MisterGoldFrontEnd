@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/adm_cadastro.css">
+    <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+    <title>Cadastro Administração</title>
+</head>
+<body>
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container-fluid justify-content-between">
+      <div class="d-flex">
+          <button class="btn-sidebar">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="logo">
+              <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#"><img src="/images/logo.png"
+                      loading="lazy" alt="Logo" /></a>
+              <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">Mistergold</a>
+          </div>
+      </div>
+      <div class="d-flex search-bar align-items-center">
+          <form class="input-group w-auto my-auto d-none d-sm-flex">
+              <input type="search" class="form-control rounded" placeholder="Buscar produtos.." />
+              <span class="input-group-text border-0 d-none d-lg-flex">
+                  <i class="fas fa-search"></i>
+              </span>
+          </form>
+      </div>
+      <div class="icons d-flex align-items-center">
+          <button aria-label="Carrinho">
+              <i class="fa-solid fa-cart-shopping"></i><span>Carrinho</span>
+          </button>
+          <button aria-label="Conta">
+              <i class="fa-solid fa-user"></i><span>Conta</span>
+          </button>
+      </div>
+  </div>
+</nav>
+<!-- Navbar -->
+</header>
+
+    <section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Cadastre uma conta de Administrador</h2>
+  
+                <form>
+  
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example1cg">Digite Seu Nome</label>
+                  </div>
+  
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example3cg">Digite Seu Email</label>
+                  </div>
+  
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example4cg">Digite sua Senha</label>
+                  </div>
+  
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example4cdg">Digite sua senha Novamente</label>
+                  </div>
+
+                  <div class="d-flex justify-content-center">
+                    <button  type="button" data-mdb-button-init
+                      data-mdb-ripple-init class="btn btn-success btn-block btn-lg gradient-custom-4">Cadastrar</button>
+                  </div>
+  
+                  <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                      class="fw-bold text-body"><u>Login here</u></a></p>
+  
+                </form>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="
+        background-color: var(--bgColor2);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      ">
+        <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
+        <div>
+            <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
+            <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
+        </div>
+    </footer>
+    
+  <script src="../js/index.js"></script>
+  <script src="../node_modules/mdb-ui-kit/js/mdb.umd.min.js" ></script>
+
+</body>
+</html>
