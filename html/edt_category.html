@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/edt_category.css">
+    <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <title>Editar Categoria</title>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid justify-content-between">
+        <div class="d-flex">
+            <button class="btn-sidebar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="logo">
+                <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#"><img src="/images/logo.png"
+                        loading="lazy" alt="Logo" /></a>
+                <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">Mistergold</a>
+            </div>
+        </div>
+        <div class="d-flex search-bar align-items-center">
+            <form class="input-group w-auto my-auto d-none d-sm-flex">
+                <input type="search" class="form-control rounded" placeholder="Buscar produtos.." />
+                <span class="input-group-text border-0 d-none d-lg-flex">
+                    <i class="fas fa-search"></i>
+                </span>
+            </form>
+        </div>
+        <div class="icons d-flex align-items-center">
+            <button aria-label="Carrinho">
+                <i class="fa-solid fa-cart-shopping"></i><span>Carrinho</span>
+            </button>
+            <button aria-label="Conta">
+                <i class="fa-solid fa-user"></i><span>Conta</span>
+            </button>
+        </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+  </header>
+
+<section class="intro">
+    <div class="h1_container">
+    <h1 class="title_NC">Editar Categoria</h1>
+    </div>
+
+        <div class="centralize">
+            <div class="category_box">
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example1cg">Digite o Novo Nome da Categoria</label>
+                </div>
+
+                <div class="mb-4 d-flex justify-content-center">
+                    <label for="send_file">
+                        <img id="selectedImage" src="../img/inserir_img.png"
+                        alt="example placeholder" style="width: 300px;" />
+                    </label>
+                    <input id="send_file" type="file" onchange="displaySelectedImage(event, 'selectedImage')"/>
+                </div>
+
+                <div class="centralize_btn">
+                    <div class="d-flex btn_box">
+                        <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
+                            <label class="form-label text-white m-1" for="salver_Novacategoria">Salvar</label>
+                            <input type="submit" class="form-control d-none" id="salver_Novacategoria">
+                        </div>
+                    </div>
+
+                    <div class="d-flex btn_box">
+                        <div data-mdb-ripple-init class="btn_delete btn btn-primary btn-rounded">
+                            <label class="form-label text-white m-1" for="salver_Novacategoria">Excluir</label>
+                            <input type="submit" class="form-control d-none" id="salver_Novacategoria"> <!-- alterar o botão de submit? -->
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer style="
+    background-color: var(--bgColor2);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  ">
+    <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
+    <div>
+        <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
+        <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
+    </div>
+</footer>
+
+<script src="../js/index.js"></script>
+<script src="../js/category_img.js"></script>
+<script src="../node_modules/mdb-ui-kit/js/mdb.umd.min.js" ></script>
+</body>
+</html>
