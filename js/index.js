@@ -55,3 +55,24 @@ document.addEventListener('DOMContentLoaded', function() {
    }
    
 });
+document.getElementById('btn-toggle-sidebar').addEventListener('click', function() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+});
+// botao de edita/cancelar/salvar perfil de usuario
+document.getElementById('btnEdit').addEventListener('click', function() {
+    // Esconde o botão de editar
+    this.style.display = 'none';
+    // Mostra o grupo de botões
+    document.getElementById('btn-group').style.display = 'flex';
+});
+
+// Função para mostrar o botão de editar e esconder o grupo de botões
+function toggleEditButtons() {
+    document.getElementById('btnEdit').style.display = 'block';
+    document.getElementById('btn-group').style.display = 'none';
+}
+
+// Adicionando event listeners para os botões do grupo
+document.getElementById('btnCancel').addEventListener('click', toggleEditButtons);
+document.getElementById('btnSave').addEventListener('click', toggleEditButtons);

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="/node_modules/mdb-ui-kit/css/mdb.min.css" />
+    <link rel="stylesheet" href="/css/adm/adm_UserTable.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Tabela de Usuarios</title>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container-fluid justify-content-between">
+                <div class="d-flex">
+                    <button class="btn-sidebar" id="btn-toggle-sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="logo">
+                        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/html/index.html"><img src="/images/logo.png"
+                                loading="lazy" alt="Logo" /></a>
+                        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/html/index.html">Mistergold</a>
+                    </div>
+                </div>
+                <div class="d-flex search-bar-container align-items-center">
+                    <form class="input-group w-auto my-auto d-none d-sm-flex">
+                        <input type="search" class="form-control rounded" placeholder="Buscar produtos.." />
+                        <span class="input-group-text border-0 d-none d-lg-flex">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </form>
+                </div>
+                <div class="icons d-flex align-items-center">
+                    <button aria-label="Carrinho" id="btn-cart-page">
+                        <i class="fa-solid fa-cart-shopping"></i><span>Carrinho</span>
+                    </button>
+                    <button aria-label="Conta" id="btn-account-page">
+                        <i class="fa-solid fa-user"></i><span>Conta</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <!-- sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-container">
+            <h2>Joias</h2>
+            <hr class="hr" />
+            <ul>
+                <li><a href="/html/categories.html">Todas as categorias</a></li>
+                <li><a href="/html/products.html">Todos os produtos</a></li>
+                <li><a href="#">Anéis</a></li>
+                <li><a href="#">Brincos</a></li>
+                <li><a href="#">Pulseiras</a></li>
+                <li><a href="#">Colares</a></li>
+                <li><a href="#">Conjuntos</a></li>
+            </ul>
+            <h2 class="adm-pages">Administração</h2>
+            <hr class="hr" />
+            <ul>
+                <li><a href="/html/adm/">Lista de produtos</a></li>
+                <li><a href="/html/adm/list_category.html">Lista de categorias</a></li>
+                <li><a href="/html/adm/adm_UserTable.html">Lista de usuarios</a></li>
+                <li><a href="#">Lista de administradores</a></li>
+            </ul>
+        </div>
+        </aside>
+    <div class="title_contanier">
+        <h1 class="page_title">Lista de Usuarios</h1>
+        <div class="title_line" aling="center"></div>
+    </div>
+
+    <section class="intro">
+        <div class="gradient-custom-1 h-100">
+          <div class="d-flex align-items-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="table-responsive bg-white">
+                    <table class="table mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">NOME</th>
+                          <th scope="col">EMAIL</th>
+                          <th scope="col">TELEFONE</th>
+                          <th scope="col">ENDEREÇO</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                        <tr>
+                          <th scope="row" style="color: #666666;">1</th>
+                          <td>Guilherme Cabral</td>
+                          <td>gui20cm@gmail.com</td>
+                          <td>11696969696</td>
+                          <td>Rua da ponta grossa</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">2</th>
+                          <td>Matheus Godoy</td>
+                          <td>hitzera_do_mine@gmail.com</td>
+                          <td>11777777777</td>
+                          <td>Servidor do Mine</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">3</th>
+                          <td>Fabio Monte</td>
+                          <td>FabinDaMaldade@gmail.com</td>
+                          <td>11333333333</td>
+                          <td>BGS</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">4</th>
+                          <td>João Neris</td>
+                          <td>joazinfenboy@gmail.com</td>
+                          <td>11242424244</td>
+                          <td>Linux apt.24</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
+        <div>
+            <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
+            <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
+        </div>
+    </footer>
+    
+      <script src="/js/index.js"></script>
+      <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
+</body>
+</html>

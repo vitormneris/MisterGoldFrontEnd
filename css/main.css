@@ -16,6 +16,14 @@ body {
     margin: 0;
     color: var(--bgColor2);
 }
+main{
+    flex-grow: 1;
+}
+.app-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 /* Navbar  */
 .navbar {
@@ -80,6 +88,58 @@ button:hover {
     border-radius: 12px; 
     border: 1px solid var(--bgColor2); 
 }
+/* estilo da sidebar */
+.sidebar-container{
+    margin-top: 10vh;
+}
+
+.sidebar {
+    width: 17.5rem;
+    background-color: var(--bgColor2);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+    left: -17.5rem; /* Esconder a sidebar inicialmente */
+    transition: left 0.3s ease; /* Animação para abrir/fechar */
+    top: 0;
+}
+
+.sidebar.open {
+    left: 0;
+    top: 0; /* Mostrar a sidebar quando a classe 'open' for adicionada */
+}
+
+#btn-toggle-sidebar:hover {
+    color: var(--hlColor1);
+}
+
+.sidebar h2 {
+    color: var(--hlColor1);
+    margin-top: 32px;
+}
+.sidebar h2.adm-pages{
+    margin-top: 100px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--bgColor1);
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: var(--hlColor1);
+}
 
 /* estilo dos card de produtos */
 .card{
@@ -128,4 +188,5 @@ color: #fff;
 padding: 20px;
 text-align: center;
 margin-top:20vh;
+margin-top: 0;
 }
