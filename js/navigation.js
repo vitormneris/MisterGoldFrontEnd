@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="/html/account.html">account</a></li>
             <li><a href="/html/cart.html">cart</a></li>
             <li><a href="/html/order.html">order</a></li>
+            <li><a href="/html/contact.html">contact</a></li>
         </ul>
         <hr class="hr" />
         <ul>

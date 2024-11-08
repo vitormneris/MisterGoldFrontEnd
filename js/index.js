@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
     `;
-    const numberOfProducts = 9;
+    const numberOfProducts = 7;
     for (let i = 0; i < numberOfProducts; i++) {
         containerProducts.insertAdjacentHTML('beforeend', cardProducts);
     }
@@ -35,24 +35,38 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Não foi encontrado um container para os cards de produtos!")
     }
 
-
-   try {
-    const containerCategories = document.getElementById('categories_container');
-    const cardCategories = ` 
-                <div class="category"><a href="/html/products.html">
-                    <img src="/images/anel.jpg" class="category-img-top" alt="Sunset Over the Sea"/>
-                    <div class="category-body">
-                      <p class="category-text">Anéis</p>
-                      <div class="category_line" align="center"></a></div>
-              `;
-    const numberOfCategories = 12;
-
-    for (let i = 0; i < numberOfCategories; i++) {
-        containerCategories.insertAdjacentHTML('beforeend', cardCategories);
+    try {
+        const containerCategories = document.getElementById('categories_container');
+        const cardCategories = `
+            <div class="category"><a href="/html/products.html">
+                <img src="/images/anel.jpg" class="category-img-top" alt="Sunset Over the Sea"/>
+                <div class="category-body">
+                    <p class="category-text">Anéis</p>
+                    <div class="category_line" align="center"></a></div>
+            </div>
+        `;
+        
+        const numberOfCategories = 12;
+        const categoriesPerRow = 6;
+        
+        let row = null; // variável para armazenar a linha
+        for (let i = 0; i < numberOfCategories; i++) {
+            // Quando for o primeiro item ou múltiplo de 6, cria uma nova linha
+            if (i % categoriesPerRow === 0) {
+                if (row) {
+                    containerCategories.appendChild(row); // Adiciona a linha anterior antes de criar a nova
+                }
+                row = document.createElement('div');
+                row.classList.add('row'); // Adiciona a classe 'row' para garantir a estrutura correta
+            }
+            row.insertAdjacentHTML('beforeend', cardCategories); // Adiciona o card à linha atual
+        }
+        if (row) {
+            containerCategories.appendChild(row); // Adiciona a última linha
+        }
+    } catch (error) {
+        console.log("Não foi encontrado um container para os cards de categorias!");
     }
-   } catch (error) {
-    console.log("Não foi encontrado um container para os cards de categorias!")
-   }
    
 });
 

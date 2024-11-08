@@ -3,23 +3,40 @@
 .categories_container{
     /* max-width: 1080px; */
     margin: auto;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
     padding-left: 25px;
     padding-right: 25px;
 }
 
 .categories_container .row {
-    margin-top: 50px;
     display: flex;
     align-items: center;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 1rem;
+    border-radius: 50px;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
-
+#categories_container .row:nth-child(even) {
+    background-color: var(--bgColor4);  
+    border: 6px solid var(--bgColor4);
+}
+  
+  #categories_container .row:nth-child(odd) {
+    background-color: var(--bgColor2);
+  }
+  #categories_container .row:nth-child(odd) .category-text{
+    color: var(--bgColor1);
+  }
+  #categories_container .row:nth-child(odd) .category_line{
+    background-color: var(--bgColor1);
+  }
 .row .category{
     width: 18rem;
     border-radius: 50px;
-    margin-bottom: 35px;
     --mdb-card-box-shadow: none;
     background-color: transparent;
     /* border: 1px solid green; */
