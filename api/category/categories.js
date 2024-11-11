@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data.content.forEach(contents => {
 
             const cardCategories = `
-            <div class="category" onclick="redirectToProductPage('${contents.id}')">
+            <div class="category" onclick="redirectToCategoryPage('${contents.id}')">
                 <img src="${contents.imageUrl}" class="category-img-top" alt="Sunset Over the Sea"/>
                 <div class="category-body">
                     <p class="category-text">${contents.name}</p>

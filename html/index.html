@@ -68,6 +68,17 @@
     <script src="../api/product/products.js"></script>
     <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
     <script src="/js/navigation.js"></script>
+
+    <script>
+
+        function redirectToCategoryPage(productId) {
+           window.location.href = `/html/productsByCategory.html?id=${productId}`;
+         }
+
+        function redirectToProductPage(productId) {
+           window.location.href = `/html/product.html?id=${productId}`;
+         }
+    </script>
 </body>
 
 </html>
