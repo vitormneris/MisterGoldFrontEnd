@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                                 <p class="card-text product-price-card"> 10 x R$ ${contents.price / 10} no cartão </p>
 
-                                <a href="#!" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>+</a>
+                                <a href="#!" class="btn btn-primary" onclick="addToCart('${contents.id}', '${contents.name}', '${contents.price}', '${contents.imageUrl}')"><i class="fa-solid fa-cart-shopping"></i>+</a>
 
                             </div>
                         </div>
@@ -46,3 +46,21 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 })
+function addToCart(id, name, price, imageUrl) {
+    const product = {
+        id: id,
+        name: name,
+        price: parseFloat(price),
+        imageUrl: imageUrl,
+        quantity: 1 // sempre será 1 inicialmente
+    };
+
+    // Verifica se já existe algum produto no carrinho
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    // Adiciona o produto ao carrinho
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Produto adicionado ao carrinho!");
+}
