@@ -17,33 +17,28 @@ document.addEventListener('DOMContentLoaded', function() {
         <h2 class="adm-pages">Administração</h2>
         <hr class="hr" />
         <ul>
-            <li><a href="/html/adm/">Lista de produtos</a></li>
+            <li><a href="/html/adm/list_product.html">Lista de produtos</a></li>
             <li><a href="/html/adm/list_category.html">Lista de categorias</a></li>
-            <li><a href="/html/adm/adm_UserTable.html">Lista de usuarios</a></li>
-            <li><a href="#">Lista de administradores</a></li>
+            <li><a href="/html/adm/list_client.html">Lista de clientes</a></li>
+            <li><a href="/html/adm/profile_adm.html">Perfil administrador</a></li>
         </ul>
         <h2 class="adm-pages">Todas as paginas</h2>
         <hr class="hr" />
         <ul>
-            <li><a href="/html/index.html">index</a></li>
-            <li><a href="/html/register.html">register</a></li>
-            <li><a href="/html/login.html">login</a></li>
-            <li><a href="/html/product.html">product</a></li>
-            <li><a href="/html/products.html">products</a></li>
-            <li><a href="/html/categories.html">categories</a></li>
-            <li><a href="/html/account.html">account</a></li>
+            <li><a href="/html/index.html">Página principal</a></li>
+            <li><a href="/html/register.html">Cadastra-se</a></li>
+            <li><a href="/html/login.html">Logar-se</a></li>
+            <li><a href="/html/account.html">Seu perfil</a></li>
             <li><a href="/html/cart.html">cart</a></li>
             <li><a href="/html/order.html">order</a></li>
             <li><a href="/html/contact.html">contact</a></li>
         </ul>
+        <h2 class="adm-pages">Outras</h2>
         <hr class="hr" />
         <ul>
-            <li><a href="/html/adm/new_category.html">new_category</a></li>
-            <li><a href="/html/adm/list_category.html">list_category</a></li>
-            <li><a href="/html/adm/edt_category.html">edt_category</a></li>
-            <li><a href="/html/adm/cadastro_adm.html">cadastro_adm</a></li>
-            <li><a href="/html/adm/adm_UserTable.html">adm_UserTable</a></li>
-            <li><a href="/html/adm/insert_product.html">insert_product</a></li>
+            <li><a href="/html/adm/new_category.html">Criar categoria</a></li>
+            <li><a href="/html/adm/new_adm.html">Criar administrador</a></li>
+            <li><a href="/html/adm/new_product.html">Criar produto</a></li>
         </ul>
     </div>
                   `;

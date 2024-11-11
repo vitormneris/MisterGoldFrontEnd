@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de produtos</title>
+  <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/products.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <header id="navbar">
+      <!-- Navbar -->
+
+    </header>
+    <!-- sidebar -->
+    <aside class="sidebar" id="sidebar">
+    </aside>
+    <main>
+      <!-- Seção Hero -->
+      <section class="p-5 text-center bg-image" style="background-image: url('/images/joias2.jpg'); height: 600px">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3">Produtos</h1>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="divider-container">
+        <hr class="hr hr-blurry divider-line" />
+        <h3 class="divider-text">Navegue por produtos utilizando filtros!</h3>
+      </div>
+
+
+      <section class="boxes-container">
+        <!-- Seção de Filtros -->
+        <div class="side-box">
+
+          <!--aqui é o começo de um filtro  -->
+          <div class="divider-containerALT">
+            <h3 class="divider-textALT">Materiais</h3> <!--nome da categoria-->
+          </div>
+          <!-- opção -->
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="checkbox" value="" /><!--checkbox da opção-->
+            </div>
+            <h3 class="form-control">Ouro</h3><!--nome da opção-->
+          </div>
+          <!--fim do filtro  -->
+
+          <!--começo de outro filtro com mais opções -->
+          <div class="divider-containerALT">
+            <h3 class="divider-textALT">Tipo</h3> <!--nome da categoria-->
+          </div>
+          <!-- opção -->
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="checkbox" value="" /><!--checkbox da opção-->
+            </div>
+            <h3 class="form-control">Anel</h3><!--nome da opção-->
+          </div>
+          <!-- opção -->
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="checkbox" value="" /><!--checkbox da opção-->
+            </div>
+            <h3 class="form-control">Brinco</h3><!--nome da opção-->
+          </div>
+          <!-- opção -->
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="checkbox" value="" /><!--checkbox da opção-->
+            </div>
+            <h3 class="form-control">Pulseira</h3><!--nome da opção-->
+          </div>
+          <!--fim do filtro  -->
+
+        </div>
+        <!-- Seção de produtos -->
+
+        <div class="products-box">
+          <div id="container" class="row" id="card-container">
+            <!-- First column -->
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
+    <div>
+      <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
+      <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
+    </div>
+  </footer>
+
+  <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
+  <!-- <script src="/js/index.js"></script> -->
+  <script src="../api/category/categoryByProducts.js"></script>
+  <script>
+    function redirectToProductPage(productId) {
+      window.location.href = `/html/product.html?id=${productId}`;
+    }
+  </script>
+
+  <script src="/js/navigation.js"></script>
+</body>
+
+</html>

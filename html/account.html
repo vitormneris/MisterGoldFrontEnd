@@ -2,145 +2,154 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mistergold</title>
-    <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/account.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mistergold</title>
+  <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/account.css">
 </head>
 
 <body>
-    <div class="app-container">
-      <header id="navbar">
-        <!-- Navbar -->
-       
+  <div class="app-container">
+    <header id="navbar">
+      <!-- Navbar -->
+
     </header>
-        <!-- sidebar -->
-        <aside class="sidebar" id="sidebar">
-        </aside>
+    <!-- sidebar -->
+    <aside class="sidebar" id="sidebar">
+    </aside>
     <main>
-        <div class="form-container">
-            <h2>Perfil</h2>
-            <hr class="hr" />
-            <form>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row mb-4">
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">Nome</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Estado</label>
-                    </div>
-                  </div>
-                </div>
+      <div class="form-container">
+        <h2>Perfil</h2>
+        <hr class="hr" />
+        <form>
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+          <div class="row mb-4">
+            <div class="col">
+              <div data-mdb-input-init class="form-outline">
+                <input type="text" id="name" class="form-control" />
+                <label class="form-label" for="name">Nome</label>
+              </div>
+            </div>
+            <div class="col">
+              <div data-mdb-input-init class="form-outline">
+                <input type="text" id="state" class="form-control" />
+                <label class="form-label" for="state">Estado</label>
+              </div>
+            </div>
+          </div>
 
-                <div class="row mb-4">
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">Email</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Cidade</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-4">
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">Senha</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Bairro</label>
-                    </div>
-                  </div>
-                </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div data-mdb-input-init class="form-outline">
+                <input type="text" id="email" class="form-control" />
+                <label class="form-label" for="email">Email</label>
+              </div>
+            </div>
+            <div class="col">
+              <div data-mdb-input-init class="form-outline">
+                <input type="text" id="city" class="form-control" />
+                <label class="form-label" for="city">Cidade</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div data-mdb-input-init class="form-outline">
+                <input type="text" id="phone" class="form-control" />
+                <label class="form-label" for="phone">Celular / Telefone</label>
+              </div>
+            </div>
+            <div class="col">
+              <div data-mdb-input-init class="form-outline">
+                <input type="text" id="neighborhood" class="form-control" />
+                <label class="form-label" for="neighborhood">Bairro</label>
+              </div>
+            </div>
+          </div>
 
-                <div class="row mb-4">
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">Celular / Telefone</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Logradouro</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col">
-                        <div>
-                            <button data-mdb-ripple-init type="button" class="btn btn-warning btn-block mb-4" id="btnEdit">Editar</button>
-                            <div class="row mb-4" id="btn-group" style="display: none;">
-                                <div class="col">
-                                    <button data-mdb-ripple-init type="button" class="btn btn-danger btn-block mb-4" id="btnCancel">Cancelar</button>
-                                </div>
-                                <div class="col">
-                                    <button data-mdb-ripple-init type="button" class="btn btn-success btn-block mb-4" id="btnSave">Salvar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                  <div class="col">
-                    <div class="row mb-4">
-                        <div class="col">
-                          <div data-mdb-input-init class="form-outline">
-                            <input type="text" id="form6Example1" class="form-control" />
-                            <label class="form-label" for="form6Example1">Nº Casa</label>
-                          </div>
-                        </div>
-                        <div class="col-8">
-                          <div data-mdb-input-init class="form-outline">
-                            <input type="text" id="form6Example2" class="form-control" />
-                            <label class="form-label" for="form6Example2">Complemento</label>
-                          </div>
-                        </div>
-                      </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div data-mdb-input-init class="form-outline">
+                <input type="text" id="street" class="form-control" />
+                <label class="form-label" for="street">Logradouro</label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row mb-4">
+                <div class="col">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="number" class="form-control" />
+                    <label class="form-label" for="number">Nº Casa</label>
                   </div>
                 </div>
-              
-                
-              
-             
-              
-                <!-- Submit button -->
-      
-              </form>
-        </div>
+                <div class="col-8">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="complement" class="form-control" />
+                    <label class="form-label" for="complement">Complemento</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-       
+
+          <div class="row mb-4">
+            <div class="col">
+              <div data-mdb-input-init class="form-outline">
+                <input type="text" id="postalCode" class="form-control" />
+                <label class="form-label" for="postalCode">CEP</label>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <button data-mdb-ripple-init type="button" class="btn btn-warning btn-block mb-4"
+                  id="btnEdit">Editar</button>
+                <div class="row mb-4" id="btn-group" style="display: none;">
+                  <div class="col">
+                    <button data-mdb-ripple-init onclick="toggleEditButtons()" type="button"
+                      class="btn btn-danger btn-block mb-4" id="btnCancel">Cancelar</button>
+                  </div>
+                  <div class="col">
+                    <button data-mdb-ripple-init type="button" class="btn btn-success btn-block mb-4"
+                      id="buttonUpdate">Salvar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="status"></div>
+        </form>
+      </div>
     </main>
-</div>
-    <footer>
-        <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
-        <div>
-            <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
-            <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
-        </div>
-    </footer>
+  </div>
+  <footer>
+    <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
+    <div>
+      <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
+      <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
+    </div>
+  </footer>
 
-    <script src="../node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="/js/navigation.js"></script>
+  <script>
+    document.getElementById('btnEdit').addEventListener('click', function () {
+      this.style.display = 'none';
+      document.getElementById('btn-group').style.display = 'flex';
+    });
+
+    function toggleEditButtons() {
+      document.getElementById('btnEdit').style.display = 'block';
+      document.getElementById('btn-group').style.display = 'none';
+    }
+  </script>
+
+  <script src="../node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
+  <script type="module" src="../api/client/findClient.js"></script>
+  <script type="module" src="../api/client/updateClient.js"></script>
+  <script src="/js/navigation.js"></script>
 </body>
 
 </html>

@@ -89,7 +89,7 @@
           <!-- Seção de produtos -->
 
         <div class="products-box">
-                <div class="row" id="card-container">
+                <div id="containerProducts" class="row" id="card-container">
                     <!-- First column -->
                 </div>
         </div>
@@ -106,7 +106,14 @@
 </footer>
 
 <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
-<script src="/js/index.js"></script>
+  <!-- <script src="/js/index.js"></script> -->
+<script src="../api/product/products.js"></script>
+<script>
+ function redirectToProductPage(productId) {
+    window.location.href = `/html/product.html?id=${productId}`;
+  }
+</script>
+
 <script src="/js/navigation.js"></script>
 </body>
 

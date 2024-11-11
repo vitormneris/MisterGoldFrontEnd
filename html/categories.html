@@ -14,16 +14,10 @@
 
 <body>
     <div class="app-container">
-        <header id="navbar">
-            <!-- Navbar -->
-           
-        </header>
-            <!-- sidebar -->
-            <aside class="sidebar" id="sidebar">
-            </aside>
+        <header id="navbar"></header>
+        <aside class="sidebar" id="sidebar"></aside>
     <main>
 
-         <!-- Seção Hero -->
          <section class="p-5 text-center bg-image" style="background-image: url('/images/joias.jpg'); height: 600px">
             <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
                 <div class="d-flex justify-content-center align-items-center h-100">
@@ -41,8 +35,8 @@
          </div>
 
         <div class="categories_container">
-            <div class="row" id="categories_container">
-              <!-- Aqui vai o codigo do card de categorias -->
+            <div class="row" id="containerCategories">
+
             </div>
         </div>
     </main>
@@ -57,7 +51,13 @@
 </footer>
 
     <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="/api/category/categories.js"></script>
+    <script>
+        function redirectToProductPage(productId) {
+           window.location.href = `/html/productsByCategory.html?id=${productId}`;
+         }
+    </script>
+    <!-- <script src="/js/index.js"></script> -->
     <script src="/js/navigation.js"></script>
 </body>
 

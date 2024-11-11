@@ -2,20 +2,19 @@
   display: flex;
   background-color: var(--bgColor2);
   width: 70rem;
-  height: 30rem;
+  height: 35rem;
   justify-content: center;
-  margin: 0 auto;
   /* Centraliza horizontalmente */
   border-radius: 24px;
   padding: 1rem;
   color: var(--bgColor1);
-  margin-top: 0 auto;
-  margin-bottom: 0 auto;
+  margin: 150px auto;
 }
 
 .p-image {
   float: left;
   max-width: 60%;
+  margin: auto;
 }
 
 

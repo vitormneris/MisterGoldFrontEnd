@@ -29,14 +29,14 @@
                 <div class="row mb-4">
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">Nome</label>
+                      <input type="text" id="name" class="form-control" />
+                      <label class="form-label" for="name">Nome</label>
                     </div>
                   </div>
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Estado</label>
+                      <input type="text" id="state" class="form-control" />
+                      <label class="form-label" for="state">Estado</label>
                     </div>
                   </div>
                 </div>
@@ -44,28 +44,28 @@
                 <div class="row mb-4">
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">Email</label>
+                      <input type="text" id="email" class="form-control" />
+                      <label class="form-label" for="email">Email</label>
                     </div>
                   </div>
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Cidade</label>
+                      <input type="text" id="city" class="form-control" />
+                      <label class="form-label" for="city">Cidade</label>
                     </div>
                   </div>
                 </div>
                 <div class="row mb-4">
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">Senha</label>
+                      <input type="text" id="password" class="form-control" />
+                      <label class="form-label" for="password">Senha</label>
                     </div>
                   </div>
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Bairro</label>
+                      <input type="text" id="neighborhood" class="form-control" />
+                      <label class="form-label" for="neighborhood">Bairro</label>
                     </div>
                   </div>
                 </div>
@@ -73,17 +73,43 @@
                 <div class="row mb-4">
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">Celular / Telefone</label>
+                      <input type="text" id="phone" class="form-control" />
+                      <label class="form-label" for="phone">Celular / Telefone</label>
                     </div>
                   </div>
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Logradouro</label>
+                      <input type="text" id="street" class="form-control" />
+                      <label class="form-label" for="street">Logradouro</label>
                     </div>
                   </div>
                 </div>
+
+                <div class="row mb-4">
+                  <div class="col">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="postalCode" class="form-control" />
+                      <label class="form-label" for="postalCode">CEP</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row mb-4">
+                        <div class="col">
+                          <div data-mdb-input-init class="form-outline">
+                            <input type="text" id="number" class="form-control" />
+                            <label class="form-label" for="number">Nº Casa</label>
+                          </div>
+                        </div>
+                        <div class="col-8">
+                          <div data-mdb-input-init class="form-outline">
+                            <input type="text" id="complement" class="form-control" />
+                            <label class="form-label" for="complement">Complemento</label>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
                 <div class="row mb-4">
                   <div class="col">
                     <div class="row mb-4">
@@ -92,31 +118,12 @@
                         </div>
                       </div>
                   </div>
-                  <div class="col">
-                    <div class="row mb-4">
-                        <div class="col">
-                          <div data-mdb-input-init class="form-outline">
-                            <input type="text" id="form6Example1" class="form-control" />
-                            <label class="form-label" for="form6Example1">Nº Casa</label>
-                          </div>
-                        </div>
-                        <div class="col-8">
-                          <div data-mdb-input-init class="form-outline">
-                            <input type="text" id="form6Example2" class="form-control" />
-                            <label class="form-label" for="form6Example2">Complemento</label>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
+       
                 </div>
-              
-                
-              
-             
-              
                 <!-- Submit button -->
-                <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4 ">Cadastrar</button>
+                <button id="button" data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4 ">Cadastrar</button>
               </form>
+              <div id="status"></div>
         </div>
 
     </main>
@@ -130,6 +137,7 @@
   </footer>
 
   <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
+  <script src="../api/client/insertClient.js" ></script>
   <script src="/js/navigation.js"></script>
 </body>
 

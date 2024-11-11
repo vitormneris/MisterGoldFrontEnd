@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mistergold</title>
-    <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/product.css" />
-  </head>
 
-  <body>
-    <div class="app-container">
-      <header id="navbar">
-        <!-- Navbar -->
-       
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mistergold</title>
+  <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/product.css" />
+
+  <script src="../api/product/product.js"></script>
+
+</head>
+
+<body>
+  <div class="app-container">
+    <header id="navbar">
+      <!-- Navbar -->
+
     </header>
-        <!-- sidebar -->
-        <aside class="sidebar" id="sidebar">
-        </aside>
+    <!-- sidebar -->
+    <aside class="sidebar" id="sidebar">
+    </aside>
     <main>
       <!-- Seção de Produtos -->
       <section class="marginTop">
@@ -33,17 +34,19 @@
           </div>
 
           <div class="p-details">
-            <h5 class="p-title">
-            Anel Pedra Oval Em Ouro 18K Com Esmeralda E Diamante 0,174Ct</h5>
-            <p class="p-cash">R$ 11.691,00 à vista</p>
-            <p class="p-card">R$ 12.599,00 no cartão</p>
-            <h5 class="p-info">Detalhes do produto</h5>
+            <h5 class="p-title" id="name"></h5>
+            <p class="p-cash" id="price"></p>
+            <p class="p-card" id="price_card"></p>
+            <h5 class="p-info" id="description">Detalhes do produto</h5>
             <div class="p-info-container">
-              <p class="p-material"><label for="p-material"> <b>Material:</b></label>Ouro 18K</p>
-              <p class="p-type"><label for="p-type"> <b>Tipo:</b></label>Anel</p>
-              <p class="p-jewel"><label for="p-jewel"> <b>Pedra:</b></label>Esmeralda com detalhes em Diamante</p>
+              <p class="p-material" id="material"><label for="p-material"> <b>Material:</b></label></p>
+              <p class="p-size" id="size"><label for="p-size"> <b>Tamanho:</b></label></p>
+              <p class="p-weight" id="weight"><label for="p-weight"> <b>Peso:</b></label></p>
+              <p class="p-color" id="color"><label for="p-color"> <b>Cor:</b></label></p>
+              <p class="p-quantity" id="quantity"><label for="p-quantity"> <b>Quantidade:</b></label></p>
             </div>
-            <a href="#!" class="btn btn-primary w-100"><i class="fa-solid fa-cart-shopping"></i>Adicionar ao carrinho</a>
+            <a href="#!" class="btn btn-primary w-100">
+              <i class="fa-solid fa-cart-shopping"></i>Adicionar ao carrinho</a>
           </div>
 
         </div>
@@ -51,15 +54,15 @@
     </main>
   </div>
   <footer>
-      <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
-      <div>
-          <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
-          <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
-      </div>
+    <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
+    <div>
+      <a href="#" style="color: #facc15; margin: 0 10px">Termos de Serviço</a>
+      <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
+    </div>
   </footer>
 
   <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
-  <script src="/js/index.js"></script>
   <script src="/js/navigation.js"></script>
-  </body>
+</body>
+
 </html>
