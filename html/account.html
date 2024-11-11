@@ -106,6 +106,9 @@
             </div>
             <div class="col">
               <div>
+                <button data-mdb-ripple-init type="button" class="btn btn-success btn-block mb-4"
+                id="buttonLogOff">Deslogar</button>
+
                 <button data-mdb-ripple-init type="button" class="btn btn-warning btn-block mb-4"
                   id="btnEdit">Editar</button>
                 <div class="row mb-4" id="btn-group" style="display: none;">
@@ -147,8 +150,14 @@
   </script>
 
   <script src="../node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
-  <script type="module" src="../api/client/findClient.js"></script>
-  <script type="module" src="../api/client/updateClient.js"></script>
+  <script type="module" src="/api/client/findClient.js"></script>
+  <script type="module" src="/api/client/updateClient.js"></script>
+  <script>
+    document.getElementById("buttonLogOff").addEventListener("click", function(event) {
+      localStorage.removeItem("token")
+      window.location.href = "/html/login.html"
+    })
+  </script>
   <script src="/js/navigation.js"></script>
 </body>
 
