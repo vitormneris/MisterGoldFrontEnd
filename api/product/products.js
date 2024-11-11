@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         data.content.forEach(contents => {
 
             const cardProducts = `
-                    <div onclick="redirectToProductPage('${contents.id}')" class="col-lg-4 col-md-12 mb-6 mb-lg-3">
+                    <div class="col-lg-4 col-md-12 mb-6 mb-lg-3">
                         <div class="card">
 
-                            <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <div onclick="redirectToProductPage('${contents.id}')" class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
                                 <img src="${contents.imageUrl}" class="img-fluid"> 
                             </div>
 

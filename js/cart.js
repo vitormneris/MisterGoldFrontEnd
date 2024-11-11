@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <div class="item-quantity">
                     <label for="item-quantity">Quantidade:</label>
-                    <input class="item-quantity" type="number" min="1" value="${item.quantity}" onchange="updateQuantity('${item.id}', this.value)">
+                    <input id="quantity" class="item-quantity" type="number" min="1" value="${item.quantity}" onchange="updateQuantity('${item.id}', this.value)">
                 </div>
                 <div class="item-price">
                     <label for="item-price">Valor unitário:</label>

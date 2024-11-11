@@ -38,6 +38,9 @@
                   </div>
 
                   <div class="centralize_btn">
+                    <button data-mdb-ripple-init type="button" class="btn btn-success btn-block mb-4"
+                    id="buttonLogOff">Deslogar</button>
+
                     <div id="buttonUpdate" class="d-flex btn_box">
                         <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
                             <label class="form-label text-white m-1" for="save">Atualizar</label>
@@ -73,7 +76,12 @@
         <a href="#" style="color: #facc15; margin: 0 10px">Política de Privacidade</a>
     </div>
 </footer>
-    
+  <script>
+    document.getElementById("buttonLogOff").addEventListener("click", function(event) {
+      localStorage.removeItem("token")
+      window.location.href = "/html/login.html"
+    })
+  </script>
   <script type="module" src="../../api/adm/updateAdministrator.js"></script>
   <script type="module" src="../../api/adm/findAdministrator.js"></script>
   <script src="/js/navigation.js"></script>
