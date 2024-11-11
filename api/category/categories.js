@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const cardCategories = `
             <div class="category" onclick="redirectToProductPage('${contents.id}')">
-                <img src="/images/anel.jpg" class="category-img-top" alt="Sunset Over the Sea"/>
+                <img src="${contents.imageUrl}" class="category-img-top" alt="Sunset Over the Sea"/>
                 <div class="category-body">
                     <p class="category-text">${contents.name}</p>
                     <div class="category_line" align="center">

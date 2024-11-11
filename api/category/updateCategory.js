@@ -8,25 +8,27 @@ validationAdm(token).then(id => {
         event.preventDefault()
 
         const name = document.getElementById("name").value;
-        const imageUrl = "imagem.url" // document.getElementById("imageUrl").value;
         const description = "desc"// document.getElementById("description").value;
+        const image = document.getElementById("image").files[0]
 
-        let category = {
+        const category = new FormData();
+    
+        category.append("category", new Blob([JSON.stringify({
             "name": name,
-            "imageUrl": imageUrl,
             "description": description
-        }
+        })], { type: "application/json" }));
+    
+        category.append("file", image);
 
         const urlParams = new URLSearchParams(window.location.search);
         const categoryId = urlParams.get('id');
 
         fetch('http://localhost:8084/categorias/' + categoryId + '/atualizar', {
             headers: { 
-                "Content-Type": "application/json",
                 "Authorization": "Bearer " + token
             },
             method: "PUT",
-            body: JSON.stringify(category)
+            body: category
         })
         .then(response => {
             if (response.status === 200) {

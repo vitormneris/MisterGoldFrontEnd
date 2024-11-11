@@ -8,22 +8,25 @@ validationAdm(token).then(id => {
         event.preventDefault()
 
         const name = document.getElementById("name").value;
-        const imageUrl = "imagem.url" // document.getElementById("imageUrl").value;
         const description = "desc"// document.getElementById("description").value;
 
-        let category = {
+        const image = document.getElementById("image").files[0]
+
+        const category = new FormData();
+    
+        category.append("category", new Blob([JSON.stringify({
             "name": name,
-            "imageUrl": imageUrl,
             "description": description
-        }
+        })], { type: "application/json" }));
+    
+        category.append("file", image);
 
         fetch('http://localhost:8084/categorias/salvar', {
             headers: { 
-                "Content-Type": "application/json",
                 "Authorization": "Bearer " + token
             },
             method: "POST",
-            body: JSON.stringify(category)
+            body: category
         })
         .then(response => {
             if (response.status === 201) {

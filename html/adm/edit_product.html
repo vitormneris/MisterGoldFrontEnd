@@ -28,7 +28,10 @@
             background-position: center;">
             <div
                 style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 100vh; border: 1px solid #000;">
-                <img src="/images/inserir_img.png" alt="Marcos" style="width: 100%; max-width: 470px; height: auto;">
+                <label for="image">
+                    <img id="selectedImage" src="../../images/inserir_img.png" alt="example placeholder" style="width: 300px;" />
+                </label>
+                <input id="image" type="file" style="display: none;" />
                 <div
                     style="margin: 10px; padding: 20px; background-color: #f0f0f0; border: 1px solid #ccc; flex: 1 1 300px;">
                     <form>
@@ -39,15 +42,6 @@
                                 <div data-mdb-input-init class="form-outline">
                                 <input type="text" id="name" class="form-control" />
                                 <label class="form-label" for="name">Nome</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col">
-                                <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="imageUrl" class="form-control" />
-                                <label class="form-label" for="imageUrl">Imagem</label>
                                 </div>
                             </div>
                         </div>
@@ -151,6 +145,7 @@
     <script type="module" src="../../api/product/updateProduct.js"></script>
     <script src="/api/category/CategoryOptions.js"></script>
     <script src="/js/navigation.js"></script>
+    <script src="/js/change_img.js"></script>
     <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
 </body>
 

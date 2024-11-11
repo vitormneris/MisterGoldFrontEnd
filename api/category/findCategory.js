@@ -26,9 +26,8 @@ function showData(data) {
     tdName.value = data.name
     tdName.focus()
 
-    // const tdImageUrl = document.getElementById("imageUrl")
-    // tdImageUrl.value = data.imageUrl
-    // tdImageUrl.focus()
+    const tdImageUrl = document.getElementById("selectedImage")
+    tdImageUrl.src = data.imageUrl
 
     // const tdDetails = document.getElementById("description")
     // tdDetails.value = data.description

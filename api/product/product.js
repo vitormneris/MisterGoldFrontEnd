@@ -25,6 +25,9 @@ function showData(data) {
     
     const tdName = document.getElementById("name")
     tdName.innerText = data.name
+        
+    const tdImage = document.getElementById("image")
+    tdImage.src = data.imageUrl
 
     const tdPrice = document.getElementById("price")
     tdPrice.innerText = "R$ " + data.price + " à vista"

@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="card">
 
                             <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                                <img src="/images/anel.jpg" class="img-fluid"> 
+                                <img src="${contents.imageUrl}" class="img-fluid"> 
                             </div>
 
                             <div class="card-body">

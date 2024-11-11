@@ -43,15 +43,12 @@ validationAdm(token).then(id => {
     
         product.append("file", image);
 
-        console.log(product)
-
         fetch('http://localhost:8084/produtos/salvar', {
             method: "POST",
             headers: { 
-                "Content-Type": "application/json",
                 "Authorization": "Bearer " + token
             },
-            body: JSON.stringify(product)
+            body: product
         })
         .then(response => {
             if (response.status === 201) {

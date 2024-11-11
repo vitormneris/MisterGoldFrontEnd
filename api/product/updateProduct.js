@@ -8,7 +8,6 @@ validationAdm(token).then(id => {
         event.preventDefault()
 
         const name = document.getElementById("name").value
-        const imageUrl = document.getElementById("imageUrl").value
         const color = document.getElementById("color").value
         const weight = document.getElementById("weight").value
         const size = document.getElementById("size").value
@@ -26,9 +25,12 @@ validationAdm(token).then(id => {
             }
         }
 
-        let product = {
+        const image = document.getElementById("image").files[0]
+
+        const product = new FormData();
+
+        product.append("product", new Blob([JSON.stringify({
             "name": name,
-            "imageUrl": imageUrl,
             "color": color,
             "weight": weight,
             "size": size,
@@ -37,7 +39,9 @@ validationAdm(token).then(id => {
             "quantity": quantity,
             "description": description,
             "categories": categoriesSelected
-        }
+        })], { type: "application/json" }));
+    
+        product.append("file", image);
 
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
@@ -45,10 +49,9 @@ validationAdm(token).then(id => {
         fetch('http://localhost:8084/produtos/' + productId + '/atualizar', {
             method: "PUT",
             headers: { 
-                "Content-Type": "application/json",
                 "Authorization": "Bearer " + token
             },
-            body: JSON.stringify(product)
+            body: product
         })
         .then(response => {
             if (response.status === 200) 
