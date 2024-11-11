@@ -8,11 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <ul>
             <li><a href="/html/categories.html">Todas as categorias</a></li>
             <li><a href="/html/products.html">Todos os produtos</a></li>
-            <li><a href="#">Anéis</a></li>
-            <li><a href="#">Brincos</a></li>
-            <li><a href="#">Pulseiras</a></li>
-            <li><a href="#">Colares</a></li>
-            <li><a href="#">Conjuntos</a></li>
         </ul>
         <h2 class="adm-pages">Administração</h2>
         <hr class="hr" />
@@ -20,26 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="/html/adm/list_product.html">Lista de produtos</a></li>
             <li><a href="/html/adm/list_category.html">Lista de categorias</a></li>
             <li><a href="/html/adm/list_client.html">Lista de clientes</a></li>
+            <li><a href="/html/adm/new_category.html">Criar categoria</a></li>
+            <li><a href="/html/adm/new_adm.html">Criar administrador</a></li>
+            <li><a href="/html/adm/new_product.html">Criar produto</a></li>
             <li><a href="/html/adm/profile_adm.html">Perfil administrador</a></li>
         </ul>
         <h2 class="adm-pages">Todas as paginas</h2>
         <hr class="hr" />
         <ul>
-            <li><a href="/html/index.html">Página principal</a></li>
-            <li><a href="/html/register.html">Cadastra-se</a></li>
-            <li><a href="/html/login.html">Logar-se</a></li>
-            <li><a href="/html/account.html">Seu perfil</a></li>
-            <li><a href="/html/cart.html">cart</a></li>
-            <li><a href="/html/order.html">order</a></li>
             <li><a href="/html/contact.html">contact</a></li>
         </ul>
-        <h2 class="adm-pages">Outras</h2>
-        <hr class="hr" />
-        <ul>
-            <li><a href="/html/adm/new_category.html">Criar categoria</a></li>
-            <li><a href="/html/adm/new_adm.html">Criar administrador</a></li>
-            <li><a href="/html/adm/new_product.html">Criar produto</a></li>
-        </ul>
+     
     </div>
                   `;
                   containerSidebar.insertAdjacentHTML('beforeend', sidebarContent);
@@ -90,6 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('btn-toggle-sidebar').addEventListener('click', function() {
         const sidebar = document.getElementById('sidebar');
         sidebar.classList.toggle('open');
+    });
+
+    document.getElementById('btn-cart-page').addEventListener('click', function() {
+        window.location.href = "/html/cart.html";
+    });
+    document.getElementById('btn-account-page').addEventListener('click', function() {
+        window.location.href = "/html/account.html";
     });
    
 });
