@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>`
 
-            divConteiner.innerHTML += cardProducts
+            divContainer.innerHTML += cardProducts
         })
     }
 });
