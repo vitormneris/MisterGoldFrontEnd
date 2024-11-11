@@ -19,7 +19,7 @@ validationAdm(token).then(id => {
         })], { type: "application/json" }));
     
         category.append("file", image);
-
+ 
         const urlParams = new URLSearchParams(window.location.search);
         const categoryId = urlParams.get('id');
 

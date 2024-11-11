@@ -16,11 +16,11 @@
     <div class="app-container">
         <header id="navbar">
             <!-- Navbar -->
-           
+
         </header>
-            <!-- sidebar -->
-            <aside class="sidebar" id="sidebar">
-            </aside>
+        <!-- sidebar -->
+        <aside class="sidebar" id="sidebar">
+        </aside>
         <section style="margin-left: 50%; width: 100%; max-width: 1200px; margin: auto; 
             background-image: url('/images/torcos.jpg');
             background-size: cover;
@@ -29,7 +29,8 @@
             <div
                 style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 100vh; border: 1px solid #000;">
                 <label for="image">
-                    <img id="selectedImage" src="../../images/inserir_img.png" alt="example placeholder" style="width: 300px;" />
+                    <img id="selectedImage" src="../../images/inserir_img.png" alt="example placeholder"
+                        style="width: 300px;" />
                 </label>
                 <input id="image" type="file" style="display: none;" />
                 <div
@@ -40,8 +41,8 @@
                         <div class="row mb-4">
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="name" class="form-control" />
-                                <label class="form-label" for="name">Nome</label>
+                                    <input type="text" id="name" class="form-control" />
+                                    <label class="form-label" for="name">Nome</label>
                                 </div>
                             </div>
                         </div>
@@ -49,32 +50,15 @@
                         <div class="row mb-4">
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="color" class="form-control" />
-                                <label class="form-label" for="color">Cor</label>
-                                </div>
-                            </div>
-    
-                            <div class="col">
-                                <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="weight" class="form-control" />
-                                <label class="form-label" for="weight">Peso</label>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row mb-4">
-                            <div class="col">
-                                <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="size" class="form-control" />
-                                <label class="form-label" for="size">Tamanho</label>
+                                    <input type="text" id="color" class="form-control" />
+                                    <label class="form-label" for="color">Cor</label>
                                 </div>
                             </div>
 
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="material" class="form-control" />
-                                <label class="form-label" for="material">Material</label>
+                                    <input type="text" id="weight" class="form-control" />
+                                    <label class="form-label" for="weight">Peso</label>
                                 </div>
                             </div>
                         </div>
@@ -83,24 +67,41 @@
                         <div class="row mb-4">
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="price" class="form-control" />
-                                <label class="form-label" for="price">Preço</label>
+                                    <input type="text" id="size" class="form-control" />
+                                    <label class="form-label" for="size">Tamanho</label>
                                 </div>
                             </div>
 
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="quantity" class="form-control" />
-                                <label class="form-label" for="quantity">Quantidade</label>
+                                    <input type="text" id="material" class="form-control" />
+                                    <label class="form-label" for="material">Material</label>
                                 </div>
                             </div>
                         </div>
-    
+
+
                         <div class="row mb-4">
                             <div class="col">
                                 <div data-mdb-input-init class="form-outline">
-                                <input type="text" id="description" class="form-control" />
-                                <label class="form-label" for="description">Descrição</label>
+                                    <input type="text" id="price" class="form-control" />
+                                    <label class="form-label" for="price">Preço</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" id="quantity" class="form-control" />
+                                    <label class="form-label" for="quantity">Quantidade</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div data-mdb-input-init class="form-outline">
+                                    <input type="text" id="description" class="form-control" />
+                                    <label class="form-label" for="description">Descrição</label>
                                 </div>
                             </div>
                         </div>
@@ -119,15 +120,15 @@
                                     <input type="submit" class="form-control d-none" id="save">
                                 </div>
                             </div>
-    
-                            <div class="d-flex btn_box">
+
+                            <div id="buttonDelete" class="d-flex btn_box">
                                 <div data-mdb-ripple-init class="btn_delete btn btn-primary btn-rounded">
                                     <label class="form-label text-white m-1" for="delete">Excluir</label>
                                     <input type="submit" class="form-control d-none" id="delete">
                                 </div>
                             </div>
                         </div>
-                    
+
                     </form>
                     <div id="status"></div>
                 </div>
@@ -142,7 +143,8 @@
         </div>
     </footer>
     <script src="../../api/product/findProduct.js"></script>
-    <script type="module" src="../../api/product/updateProduct.js"></script>
+    <script type="module" src="/api/product/updateProduct.js"></script>
+    <script type="module" src="/api/product/deleteProduct.js"></script>
     <script src="/api/category/CategoryOptions.js"></script>
     <script src="/js/navigation.js"></script>
     <script src="/js/change_img.js"></script>
