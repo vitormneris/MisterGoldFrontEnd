@@ -2,8 +2,9 @@
   display: flex;
   background-color: var(--bgColor2);
   width: 70rem;
-  height: 35rem;
+  height: auto;
   justify-content: center;
+  text-align: center;
   /* Centraliza horizontalmente */
   border-radius: 24px;
   padding: 1rem;
@@ -26,28 +27,45 @@
   padding-top: 1rem;
   /* Adiciona um espaçamento à esquerda da imagem */
 }
-.p-details a{
-margin-block-start: auto;
+
+.p-details a {
+  margin-block-start: auto;
 }
-.p-title{
-  font-size: 1.2rem;
+
+.p-title {
+  font-size: 2rem;
 }
-.p-cash{
+
+.p-cash {
   color: var(--hlColor1);
 
 }
-.p-card{
+
+.p-card {
   color: var(--bgColor3);
 }
-.p-card, .p-cash{
-  font-size: 1.4rem;
+
+.p-card,
+.p-cash {
+  font-size: 1.2rem;
 }
-.p-info{
+
+.p-info {
   text-align: center;
+  font-size: 1.2rem;
+
 }
-.p-info-container{
+
+.p-info-container {
   border: 5px solid var(--bgColor1);
   border-radius: 24px;
+  text-align: start;
   width: 100%;
   padding: 1rem;
+  margin: 20px 0pX 20px 0px;
+}
+
+.btn {
+  width: 300px;
+  margin: auto;
 }

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 0; // Página inicial
-    const pageSize = 12; // Número de itens por página
+    const pageSize = 3; // Número de itens por página
 
     fetchData();
 

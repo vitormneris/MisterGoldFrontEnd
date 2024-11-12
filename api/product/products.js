@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 0; // Página inicial
-    const pageSize = 9; // Número de itens por página
+    const pageSize = 3; // Número de itens por página
 
     fetchData();
 
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                                 <div class="category_line_alt"></div>
 
-                                <p class="card-text product-price-cash"> R$ ${contents.price} à vista </p>
+                                <p class="card-text product-price-cash"> R$ ${contents.price.toFixed(2)} à vista </p>
 
-                                <p class="card-text product-price-card"> 10 x R$ ${contents.price / 10} no cartão </p>
+                                <p class="card-text product-price-card"> 10 x R$ ${(contents.price / 10).toFixed(2)} no cartão </p>
 
                                 <a href="#!" class="btn btn-primary" onclick="addToCart('${contents.id}', '${contents.name}', '${contents.price}', '${contents.imageUrl}')"><i class="fa-solid fa-cart-shopping"></i>+</a>
 
@@ -58,6 +58,46 @@ document.addEventListener("DOMContentLoaded", function () {
             divContainer.innerHTML += cardProducts
         })
     }
+
+    function updatePagination(totalPages) {
+        const pagination = document.querySelector(".pagination");
+        pagination.innerHTML = `
+            <li class="page-item ${currentPage === 0 ? 'disabled' : ''}">
+                <a class="page-link" href="#" aria-label="Previous" data-page="prev">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>`;
+        
+        for (let i = 0; i < totalPages; i++) {
+            pagination.innerHTML += `
+                <li class="page-item ${currentPage === i ? 'active' : ''}">
+                    <a class="page-link" href="#" data-page="${i}">${i + 1}</a>
+                </li>`;
+        }
+
+        pagination.innerHTML += `
+            <li class="page-item ${currentPage === totalPages - 1 ? 'disabled' : ''}">
+                <a class="page-link" href="#" aria-label="Next" data-page="next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>`;
+    }
+
+    function handlePaginationClick(event) {
+        event.preventDefault();
+        const page = event.target.getAttribute("data-page");
+        
+        if (page === "prev" && currentPage > 0) {
+            currentPage--;
+        } else if (page === "next" && currentPage < document.querySelectorAll(".pagination .page-item").length - 3) {
+            currentPage++;
+        } else if (!isNaN(page)) {
+            currentPage = parseInt(page);
+        }
+
+        fetchData();
+    }
+
 });
 
 function addToCart(id, name, price, imageUrl) {

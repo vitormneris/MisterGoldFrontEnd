@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <i class="fa-solid fa-bars"></i>
                         </button>
                         <div class="logo">
-                            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/html/index.html"><img src="/images/logo.png"
+                            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/index.html"><img src="/images/logo.png"
                                     loading="lazy" alt="Logo" /></a>
-                            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/html/index.html">Mistergold</a>
+                            <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/index.html">Mistergold</a>
                         </div>
                     </div>
                     <div class="d-flex search-bar-container align-items-center">

@@ -26,6 +26,3 @@ console.log(" Array Next", next)
 console.log(" Result 1 : ", resultNext)
 console.log(" Result 2 : ", resultNext2)
 console.log(" Result 3 : ", resultNext3)
-
-
-

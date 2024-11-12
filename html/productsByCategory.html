@@ -27,7 +27,7 @@
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-              <h1 class="mb-3">Produtos</h1>
+              <h1 class="mb-3">Produtos por categoria</h1>
 
             </div>
           </div>
@@ -37,7 +37,7 @@
 
       <div class="divider-container">
         <hr class="hr hr-blurry divider-line" />
-        <h3 class="divider-text">Navegue por produtos utilizando filtros!</h3>
+        <h3 id="title" class="divider-text">Produtos da categoria:</h3>
       </div>
 
 
@@ -89,12 +89,29 @@
         <!-- Seção de produtos -->
 
         <div class="products-box">
-          <div id="container" class="row" id="card-container">
+          <div id="containerProducts" class="row">
             <!-- First column -->
           </div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-
       </section>
+      
     </main>
   </div>
   <footer>
@@ -106,8 +123,7 @@
   </footer>
 
   <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
-  <!-- <script src="/js/index.js"></script> -->
-  <script src="../api/category/categoryByProducts.js"></script>
+  <script src="/api/category/categoryByProducts.js"></script>
   <script>
     function redirectToProductPage(productId) {
       window.location.href = `/html/product.html?id=${productId}`;

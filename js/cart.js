@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemHTML = `
             <div class="item-container">
                 <div class="left">
-                    <div class="item-img"><img src="${item.imageUrl}" alt="${item.name}" class="item-img"></div>
+                    <div class="item-img"><img src="${item.imageUrl}" alt="${item.name}" class="item-img" style="width:100px; height:100px"></div>
                     <div class="item-name"><h3>${item.name}</h3></div>
                 </div>
                 <div class="item-quantity">
