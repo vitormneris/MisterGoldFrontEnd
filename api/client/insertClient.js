@@ -11,6 +11,8 @@ document.getElementById("button").addEventListener("click", function(event) {
     const street = document.getElementById("street").value
     const postalCode = document.getElementById("postalCode").value
     const number = document.getElementById("number").value
+    const complement = document.getElementById("complement").value
+
 
     client = {
         "name": name,
@@ -23,7 +25,8 @@ document.getElementById("button").addEventListener("click", function(event) {
             "neighborhood": neighborhood,
             "street": street,
             "postalCode": postalCode,
-            "number": number
+            "number": number,
+            "complement": complement
         }
     }
 

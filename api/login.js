@@ -9,8 +9,6 @@ document.getElementById("button").addEventListener("click", function(event) {
         "password": password
     }
 
-    console.log(userAuth)
-
     fetch('http://localhost:8084/autorizacao/login', {
         method: "POST",
         headers: { 
@@ -19,17 +17,17 @@ document.getElementById("button").addEventListener("click", function(event) {
         body: JSON.stringify(userAuth)
     })
     .then(response => {
-        if (response.status === 200) {
-            return response.json()
-        }
-        return null
+        return [ response.json(), response.status ]
     })
-    .then(data => {
-        if (data) {
-            localStorage.setItem("token", data.token)
-            showData("Login sucessido", "green")
+    .then(data => {        
+
+        if (data[1] == 200) {
+            data[0].then(json => localStorage.setItem("token", json.token))
+            window.location.href = document.referrer
+        } if (data[1] == 403) {
+            showData("Senha invalida", "red")
         } else {
-            showData("E-mail ou senha não encontrados!", "red")
+            data[0].then(error => showData(error.message, "red"))
         }
     })
     .catch(error => {

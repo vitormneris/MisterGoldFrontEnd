@@ -13,7 +13,7 @@ validationAdm(token).then(id => {
         let administrator = {
             "name": name,
             "email": email,
-            "password": "no_password"        
+            "password": "no_password"
         }
 
         fetch('http://localhost:8084/administradores/' + id + '/atualizar', {
@@ -25,13 +25,26 @@ validationAdm(token).then(id => {
             body: JSON.stringify(administrator)
         })
         .then(response => {
-            if (response.status === 200) return response.json()
-            return null
+            return [ response.json(), response.status ]
         })
-        .then(data => {
-            if (data) showData("Atualizado com sucesso!", "green")
-            else showData("Problema ao atualizar!", "red")
-            
+        .then(data => {        
+    
+            if (data[1] == 200) {
+                showData("Atualizado com sucesso!", "green")
+            } if (data[1] == 403) {
+                showData("Não autorizado", "red")
+            } else {
+                data[0].then(error => {
+                    console.log(error)
+                    let name_fields = []
+                    error.fields.forEach(field => {
+                        name_fields.push(" " +field.description)
+                    });
+
+                    showData(error.message +  name_fields + ".", "red")
+
+                })
+            }
         })
         .catch(error => {
             console.log(error)

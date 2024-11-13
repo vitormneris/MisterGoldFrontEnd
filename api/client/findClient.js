@@ -60,6 +60,10 @@ function showData(client) {
     tdNumber.value = client.address.number
     tdNumber.focus()
 
+    const tdComplement = document.getElementById("complement")
+    tdComplement.value = client.address.complement
+    tdComplement.focus()
+
     const tdName = document.getElementById("name")
     tdName.value = client.name
     tdName.focus()

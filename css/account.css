@@ -1,5 +1,5 @@
-.form-container{
-    background-color: var(--bgColor2);
+.form-container {
+    background-color: white;
     width: 80rem;
     padding: 32px;
     border-radius: 1rem;
@@ -8,26 +8,34 @@
     margin-bottom: 10rem;
     
 }
-.login-container{
+
+.login-container {
     width: 42rem;
 }
-.form-container h2{
+
+.form-container h2 {
     margin: 0 auto;
     color: var(--hlColor1);
 }
-.form-outline{
-    --mdb-input-focus-border-color: var(--hlColor1);
-    --mdb-input-focus-label-color: var(--hlColor1);
+
+.form-outline {
+    --mdb-input-focus-border-color: #f37b0b;
+    --mdb-input-focus-label-color: #f37b0b;
     font-size: 1.2rem;
     padding: 6px;
 
 }
-.form-control{
-    color: var(--bgColor1);
-    --mdb-surface-color: var(--bgColor1);
-    font-size: 1.2rem;
 
+.form-control {
+    color: #f37b0b;
+    --mdb-surface-color: #f37b0b;
+    font-size: 1.2rem;
 }
-.form-outline .form-control~.form-label{
-    color: var(--bgColor1);
+
+.form-outline .form-control~.form-label {
+    color: #f37b0b;
+}
+
+#buttonLogOff {
+    width: 200px;
 }

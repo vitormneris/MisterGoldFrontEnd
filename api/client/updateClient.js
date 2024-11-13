@@ -16,7 +16,8 @@ validationClient(token).then(id => {
         const street = document.getElementById("street").value
         const postalCode = document.getElementById("postalCode").value
         const number = document.getElementById("number").value
-    
+        const complement = document.getElementById("complement").value
+
         let client = {
             "name": name,
             "email": email,
@@ -28,7 +29,8 @@ validationClient(token).then(id => {
                 "neighborhood": neighborhood,
                 "street": street,
                 "postalCode": postalCode,
-                "number": number
+                "number": number,
+                "complement": complement
             }
         }
 
@@ -41,13 +43,26 @@ validationClient(token).then(id => {
             body: JSON.stringify(client)
         })
         .then(response => {
-            if (response.status === 200) return response.json()
-            return null
+            return [ response.json(), response.status ]
         })
-        .then(data => {
-            if (data) showData("Atualizado com sucesso!", "green")
-            else showData("Problema ao atualizar!", "red")
-            
+        .then(data => {        
+    
+            if (data[1] == 200) {
+                showData("Atualizado com sucesso!", "green")
+            } if (data[1] == 403) {
+                showData("Não autorizado", "red")
+            } else {
+                data[0].then(error => {
+                    console.log(error)
+                    let name_fields = []
+                    error.fields.forEach(field => {
+                        name_fields.push(" " +field.description)
+                    });
+
+                    showData(error.message +  name_fields + ".", "red")
+
+                })
+            }
         })
         .catch(error => {
             console.log(error)

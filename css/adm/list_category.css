@@ -1,4 +1,4 @@
-.title_contanier{
+.title_contanier {
     display: flex;
     justify-content: center;
     margin-top: 7vw;
@@ -7,11 +7,11 @@
     align-items:center;
 }
 
-.page_title{
+.page_title {
     text-align: center;
 }
 
-.title_line{
+.title_line {
 	height:4px;
 	width: 30%;
 	background-color: black;
