@@ -11,9 +11,9 @@ export async function validationAdm(token) {
             const data = await response.json();
             return data.id;
         } else {
-            window.location.href = "../../html/login.html";
+            window.location.href = "/html/login.html";
         }
     } catch (error) {
-        window.location.href = "../../html/login.html";
+        window.location.href = "/html/login.html";
     }
 }

@@ -183,6 +183,7 @@
     document.getElementById("buttonLogOff").addEventListener("click", function (event) {
       if (window.confirm("Deseja deslogar sua conta?")) {
         localStorage.removeItem("token")
+        localStorage.removeItem("cart")
         window.location.href = "/html/login.html"
       }
     })

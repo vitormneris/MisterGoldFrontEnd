@@ -23,6 +23,7 @@ document.getElementById("button").addEventListener("click", function(event) {
 
         if (data[1] == 200) {
             data[0].then(json => localStorage.setItem("token", json.token))
+            localStorage.removeItem("cart")
             window.location.href = document.referrer
         } if (data[1] == 403) {
             showData("Senha invalida", "red")

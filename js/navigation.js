@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <ul>
             <li><a href="/html/categories.html">Todas as categorias</a></li>
             <li><a href="/html/products.html">Todos os produtos</a></li>
+            <li><a href="/html/order.html">Ver seus pedidos</a></li>
         </ul>
         <h2 class="adm-pages">Administração</h2>
         <hr class="hr" />

@@ -11,8 +11,10 @@ validationClient(token).then(id => {
         method: 'GET'
     })
     .then(response => {
-        if (response.ok) {
+        if (response.status === 200) {
             return response.json()
+        } else if (response.status === 404) {
+            window.location.href = "/html/adm/profile_adm.html"
         }
     })
     .then(data => {
