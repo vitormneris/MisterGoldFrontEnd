@@ -59,16 +59,27 @@ function showData(client) {
             <div class="form-container">
                 <h2>Pedido ${count}</h2>
                 <hr class="hr" />
-                <h3 class="confirmTxt">Por favor, confirme os itens de seu pedido antes de concluir a compra:</h3>`
-    
+                <h3 class="confirmTxt">Por favor, confirme os itens de seu pedido antes de concluir a compra:</h3>
+                <hr class="hr" />`
+         
+        const date = new Date(order.moment);
+
+        const formattedDate = date.toLocaleString('pt-BR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
     
         const secondPartConteiner = `
-                <hr class="hr" />
-                <h2 class="totalTxt">Total do pedido: <span id="totalPrice">${order.totalPrice}</span></h2>
-                <h2 class="totalTxt">Momento: <span id="moment">${order.moment}</span></h2>
-                <h2 class="totalTxt">Status do pedido: <span id="orderStatus">${order.orderStatus}</span></h2>
+                <h2 style="color: black; font-size: 25px; margin: 15px">Total do pedido: <span id="totalPrice"  style="color: blue; font-size: 23px">R$ ${order.totalPrice.toFixed(2)}</span></h2>
+                <h2 style="color: black; font-size: 25px; margin: 15px">Momento: <span id="moment" style="color: blue;  font-size: 23px">${formattedDate}</span></h2>
+                <h2 style="color: black; font-size: 25px; margin: 15px">Status do pedido: <span id="orderStatus" style="color: blue;  font-size: 23px">${order.orderMessage}</span></h2>
     
-                <a href="/html/order.html"><button class="btn btn-success w-100">Confirmar compra</button></a>
+                <button class="btn btn-success w-100">Confirmar compra</button>
             </div>`
     
         mainConteiner.innerHTML += firstPartConteiner + divConteiner.outerHTML + secondPartConteiner

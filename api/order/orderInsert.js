@@ -44,9 +44,9 @@ validationClient(token).then(id => {
         })
         .then(data => {
             if (data) {
-                showData("Cadastrado com sucesso!", "green")
+                showData("Pedido realizado com sucesso!", "green")
             } else {
-                showData("Problema ao cadastrar!", "red")
+                showData("Problemas ao realizar pedido!", "red")
             }
         })
         .catch(error => {
