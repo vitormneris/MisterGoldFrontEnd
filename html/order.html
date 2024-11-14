@@ -38,6 +38,13 @@
     <script type="module" src="/api/order/findOrder.js"></script>
     <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
     <script src="/js/navigation.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(e){
+            e.preventDefault()
+            document.getElementById("buttonCart").style.display = "none"
+            document.getElementById("searchDiv").style.visibility = "hidden"
+        })
+    </script>
 </body>
 
 </html>

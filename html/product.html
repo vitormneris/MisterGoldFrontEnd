@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="/css/index.css" />
   <link rel="stylesheet" href="/css/product.css" />
+  <link rel="stylesheet" href="/css/cart.css">
+  <link rel="stylesheet" href="/css/account.css" />
   <script src="/api/product/product.js"></script>
 </head>
 
@@ -30,6 +32,10 @@
         </div>
       </section>
     </main>
+
+    <div id="mainContainer">
+
+    </div>
   </div>
   <footer>
     <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
@@ -40,8 +46,29 @@
   </footer>
 
   <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
-  <script src="/js/navigation.js"></script>
   <script src="/js/cart.js"></script>
+  <script src="/js/navigation.js"></script>
+  <script type="module" src="/api/order/orderInsert.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(e) {
+        e.preventDefault()
+
+        document.getElementById("searchSend").addEventListener("click", function(e) {
+            let name = document.getElementById("searchName").value
+            window.location.href = "/html/productsQuery.html?name=" + name
+        })
+    })
+  </script>
+    <script>
+      function abrirModal() {
+          document.getElementById('mainContainer').classList.add('ativo');
+      }
+  
+      function fecharModal() {
+          document.getElementById('mainContainer').classList.remove('ativo');
+      }
+  </script>
 </body>
 
 </html>

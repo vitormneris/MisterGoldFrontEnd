@@ -33,7 +33,7 @@
 
             <div class="col">
               <div data-mdb-input-init class="form-outline">
-                <input type="text" id="email" class="form-control"/>
+                <input type="text" id="email" class="form-control" />
                 <label class="form-label" for="form6Example1" style="cloex">Email</label>
               </div>
             </div>
@@ -51,7 +51,7 @@
               <a href="/html/register.html">Não tem uma conta? Cadastre-se</a>
             </div>
             <div class="col d-flex justify-content-center">
-              <a href="#">Esqueceu a senha?</a>
+              <a href="/html/setPasswordPart1.html">Esqueceu a senha?</a>
             </div>
           </div>
           <!-- Submit button -->
@@ -73,6 +73,13 @@
   <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
   <script src="/api/login.js"></script>
   <script src="/js/navigation.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function (e) {
+      e.preventDefault()
+      document.getElementById("buttonCart").style.display = "none"
+      document.getElementById("searchDiv").style.visibility = "hidden"
+    })
+  </script>
 </body>
 
 </html>

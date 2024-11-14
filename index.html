@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/categoria.css">
+    <link rel="stylesheet" href="/css/account.css" />
+    <link rel="stylesheet" href="/css/cart.css">
 </head>
 
-<body>
+<body id="body">
     <div class="app-container">
         <header id="navbar"></header>
         <aside class="sidebar" id="sidebar"></aside>
@@ -35,14 +37,22 @@
             </section>
 
 
+            
+
+
             <div class="title_container">
                 <h1 class="page_title">Categorias</h1>
-                <div class="title_line" aling="center"></div>
+                <div class="title_line" aling="center">
+
+                </div>
             </div>
 
             <div class="categories_container">
-                <div class="row" id="containerCategories"></div>
+                <div class="row" id="containerCategories">
+                
+                </div>
             </div>
+
             <div class="title_container">
                 <h1 class="page_title">Produtos</h1>
                 <div class="title_line" aling="center"></div>
@@ -55,6 +65,10 @@
                 </div>
             </section>
         </main>
+
+        <main id="mainContainer">
+
+        </main>
     </div>
     <footer>
         <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
@@ -64,10 +78,12 @@
         </div>
     </footer>
 
-    <script src="/api/category/categories.js"></script>
-    <script src="/api/product/products.js"></script>
+    <script src="/api/category/categoriesNotPagination.js"></script>
+    <script src="/api/product/productsNotPagination.js"></script>
     <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
+    <script type="module" src="/api/order/orderInsert.js"></script>
     <script src="/js/navigation.js"></script>
+    <script src="/js/cart.js"></script>
 
     <script>
 
@@ -78,7 +94,29 @@
         function redirectToProductPage(productId) {
            window.location.href = `/html/product.html?id=${productId}`;
          }
+
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(e) {
+            e.preventDefault()
+
+            document.getElementById("searchSend").addEventListener("click", function(e) {
+                let name = document.getElementById("searchName").value
+                window.location.href = "/html/productsQuery.html?name=" + name
+            })
+        })
+    </script>
+
+<script>
+    function abrirModal() {
+        document.getElementById('mainContainer').classList.add('ativo');
+    }
+
+    function fecharModal() {
+        document.getElementById('mainContainer').classList.remove('ativo');
+    }
+</script>
 </body>
 
 </html>

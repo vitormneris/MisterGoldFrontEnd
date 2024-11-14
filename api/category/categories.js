@@ -26,23 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function showData(data) {
-        const divContainer = document.getElementById("containerCategories");
-        divContainer.innerHTML = ""; // Limpa os dados anteriores
-
-        data.content.forEach(contents => {
-            const cardCategories = `
-                <div class="category" onclick="redirectToCategoryPage('${contents.id}')">
-                    <img src="${contents.imageUrl}" class="category-img-top" alt="${contents.name}" />
-                    <div class="category-body">
-                        <p class="category-text">${contents.name}</p>
-                        <div class="category_line" align="center"></div>
-                    </div>
-                </div>`;
-            divContainer.innerHTML += cardCategories;
-        });
-    }
-
     function updatePagination(totalPages) {
         const pagination = document.querySelector(".pagination");
         pagination.innerHTML = `
@@ -65,6 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>`;
+    }
+
+    function showData(data) {
+        const divContainer = document.getElementById("containerCategories");
+        divContainer.innerHTML = "";
+
+        data.content.forEach(contents => {
+            const cardCategories = `
+                <div class="category" onclick="redirectToCategoryPage('${contents.id}')">
+                    <img src="${contents.imageUrl}" class="category-img-top" alt="${contents.name}" />
+                    <div class="category-body">
+                        <p class="category-text">${contents.name}</p>
+                        <div class="category_line" align="center"></div>
+                    </div>
+                </div>`;
+            divContainer.innerHTML += cardCategories;
+        });
     }
 
     function handlePaginationClick(event) {

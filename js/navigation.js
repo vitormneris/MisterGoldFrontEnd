@@ -50,16 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
                             <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/index.html">Mistergold</a>
                         </div>
                     </div>
-                    <div class="d-flex search-bar-container align-items-center">
+                    <div id="searchDiv" class="d-flex search-bar-container align-items-center">
                         <form class="input-group w-auto my-auto d-none d-sm-flex">
-                            <input type="search" class="form-control rounded" placeholder="Buscar produtos.." />
-                            <span class="input-group-text border-0 d-none d-lg-flex">
+                            <input id="searchName" type="search" class="form-control rounded" placeholder="Buscar produtos.." />
+                            <span id="searchSend" class="input-group-text border-0 d-none d-lg-flex">
                                 <i class="fas fa-search"></i>
                             </span>
                         </form>
                     </div>
                     <div class="icons d-flex align-items-center">
-                        <button aria-label="Carrinho" id="btn-cart-page">
+                        <button aria-label="Carrinho"  id="buttonCart" onclick="abrirModal()">
                             <i class="fa-solid fa-cart-shopping"></i><span>Carrinho</span>
                         </button>
                         <button aria-label="Conta" id="btn-account-page">
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </nav>
                   `;
-                  containerNavbar.insertAdjacentHTML('beforeend', navbarContent);
+        containerNavbar.insertAdjacentHTML('beforeend', navbarContent);
     } catch (error) {
         console.log("Não foi possivel carregar a navbar!")
     }
@@ -79,9 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.toggle('open');
     });
 
-    document.getElementById('btn-cart-page').addEventListener('click', function() {
-        window.location.href = "/html/cart.html";
-    });
     document.getElementById('btn-account-page').addEventListener('click', function() {
         window.location.href = "/html/account.html";
     });

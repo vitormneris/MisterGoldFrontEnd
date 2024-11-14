@@ -63,4 +63,5 @@ function addToCart(id, name, price, imageUrl) {
     localStorage.setItem("cart", JSON.stringify(cart));
 
     alert("Produto adicionado ao carrinho!");
+    location.reload()
 }

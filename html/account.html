@@ -62,10 +62,10 @@
                 <label class="form-label" for="phone">Celular / Telefone</label>
               </div>
             </div>
-            
+
             <div class="col">
               <div data-mdb-input-init class="form-outline mb-3">
-                <input class="form-control" placeholder="Digite o seu bairro" type="text" id="neighborhood"/>
+                <input class="form-control" placeholder="Digite o seu bairro" type="text" id="neighborhood" />
                 <label class="form-label" for="neighborhood">Bairro</label>
               </div>
             </div>
@@ -128,7 +128,7 @@
               </div>
             </div>
 
-          <div id="status"></div>
+            <div id="status"></div>
         </form>
         <button data-mdb-ripple-init type="button" class="btn btn-dark btn-block mb-4"
           id="buttonLogOff">Deslogar</button>
@@ -159,20 +159,20 @@
       document.getElementById("name").readOnly = logic
     }
 
-    document.addEventListener("DOMContentLoaded", function(e) {
+    document.addEventListener("DOMContentLoaded", function (e) {
       e.preventDefault()
-      disableButton(true) 
+      disableButton(true)
     })
     document.getElementById('btnEdit').addEventListener('click', function () {
       this.style.display = 'none';
       document.getElementById('btn-group').style.display = 'flex';
-      disableButton(false) 
+      disableButton(false)
     });
 
     function toggleEditButtons() {
       document.getElementById('btnEdit').style.display = 'block';
       document.getElementById('btn-group').style.display = 'none';
-      disableButton(true) 
+      disableButton(true)
     }
   </script>
 
@@ -189,6 +189,14 @@
     })
   </script>
   <script src="/js/navigation.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function (e) {
+      e.preventDefault()
+      document.getElementById("buttonCart").style.display = "none"
+      document.getElementById("searchDiv").style.visibility = "hidden"
+      
+    })
+  </script>
 </body>
 
 </html>
