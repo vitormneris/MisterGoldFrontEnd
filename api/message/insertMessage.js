@@ -3,47 +3,29 @@ document.getElementById("button").addEventListener("click", function(event) {
 
     const name = document.getElementById("name").value
     const email = document.getElementById("email").value
-    const password = document.getElementById("password").value
-    const phone = document.getElementById("phone").value
-    const state = document.getElementById("state").value
-    const city = document.getElementById("city").value
-    const neighborhood = document.getElementById("neighborhood").value
-    const street = document.getElementById("street").value
-    const postalCode = document.getElementById("postalCode").value
-    const number = document.getElementById("number").value
-    const complement = document.getElementById("complement").value
+    const text = document.getElementById("text").value
 
 
-    client = {
-        "name": name,
-        "email": email,
-        "password": password,
-        "phone": phone,
-        "address": {
-            "state": state,
-            "city": city,
-            "neighborhood": neighborhood,
-            "street": street,
-            "postalCode": postalCode,
-            "number": number,
-            "complement": complement
-        }
+    let message = {
+        "senderName": name,
+        "senderEmail": email,
+        "text": text
     }
 
-    fetch('http://localhost:8084/clientes/salvar', {
+    fetch('http://localhost:8084/mensagens/salvar', {
         method: "POST",
         headers: { 
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(client)
+        body: JSON.stringify(message)
     })
     .then(response => {
         return [ response.json(), response.status ]
     })
     .then(data => {        
 
-        if (data[1] == 200) {
-            showData("Atualizado com sucesso!", "green")
+        if (data[1] == 201) {
+            showData("Mensagem enviada com sucesso!", "green")
         } if (data[1] == 403) {
             showData("Não autorizado", "red")
         } else {

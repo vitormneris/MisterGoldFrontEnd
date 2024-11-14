@@ -14,7 +14,7 @@ validationClient(token).then(id => {
         if (response.status === 200) {
             return response.json()
         } else if (response.status === 404) {
-            window.location.href = "/html/adm/profile_adm.html"
+            window.location.href = "/html/login.html"
         }
     })
     .then(data => {

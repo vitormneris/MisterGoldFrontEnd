@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <hr class="hr" />`
 
     const secondtPartConteiner =
-        `<hr class="hr" />
+           `<hr class="hr" />
             <h2 class="totalTxt">Total: <span id="cart-total">R$ ${total.toFixed(2)}</span></h2>
             <a><button id="button" class="btn btn-success w-100">Finalizar Pedido</button></a>
             <div id="status"></div>
@@ -82,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     updateCartTotal();
-
 })
 
 function updateQuantity(id, newQuantity) {
