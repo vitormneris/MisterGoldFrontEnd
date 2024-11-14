@@ -88,7 +88,7 @@
                 <div class="row mb-4">
                   <div class="col">
                     <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="postalCode" class="form-control" />
+                      <input type="text" onkeyup="pesquisacep(this.value)" id="postalCode" class="form-control" />
                       <label class="form-label" for="postalCode">CEP</label>
                     </div>
                   </div>
@@ -139,6 +139,7 @@
   <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
   <script src="/api/client/insertClient.js" ></script>
   <script src="/js/navigation.js"></script>
+  <script src="/js/find_cep.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function (e) {
       e.preventDefault()

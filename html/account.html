@@ -97,17 +97,13 @@
             </div>
           </div>
 
-
-
           <div class="row mb-4">
             <div class="col">
               <div data-mdb-input-init class="form-outline">
-                <input type="text" id="postalCode" class="form-control" />
+                <input type="text" id="postalCode" onkeyup="pesquisacep(this.value)" class="form-control" />
                 <label class="form-label" for="postalCode">CEP</label>
               </div>
             </div>
-
-
 
             <div class="col">
               <button data-mdb-ripple-init type="button" class="btn btn-warning btn-block mb-4"
@@ -179,6 +175,9 @@
   <script src="../node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
   <script type="module" src="/api/client/findClient.js"></script>
   <script type="module" src="/api/client/updateClient.js"></script>
+  <script src="/js/navigation.js"></script>
+  <script src="/js/find_cep.js"></script>
+
   <script>
     document.getElementById("buttonLogOff").addEventListener("click", function (event) {
       if (window.confirm("Deseja deslogar sua conta?")) {
@@ -188,7 +187,6 @@
       }
     })
   </script>
-  <script src="/js/navigation.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function (e) {
       e.preventDefault()

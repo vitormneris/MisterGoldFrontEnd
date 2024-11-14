@@ -53,10 +53,9 @@ validationClient(token).then(id => {
                 showData("Não autorizado", "red")
             } else {
                 data[0].then(error => {
-                    console.log(error)
                     let name_fields = []
                     error.fields.forEach(field => {
-                        name_fields.push(" " +field.description)
+                        name_fields.push(" " + field.description)
                     });
 
                     showData(error.message +  name_fields + ".", "red")
