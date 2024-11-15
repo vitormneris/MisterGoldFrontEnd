@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (e) {
     e.preventDefault()
-    fetch('http://localhost:8084/produtos?page=0&pageSize=10&isActive=true', {
+    fetch('http://localhost:8084/produtos?page=0&pageSize=9&isActive=true', {
         method: "GET"
     })
     .then(response => {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     <div class="card">
 
                         <div onclick="redirectToProductPage('${contents.id}')" class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="${contents.imageUrl}" class="img-fluid"> 
+                            <img src="${contents.imageUrl}" class="img-fluid" style="width:400px; heigth:400px"> 
                         </div>
 
                         <div class="card-body">

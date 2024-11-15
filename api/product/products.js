@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 0; // Página inicial
-    const pageSize = 3; // Número de itens por página
+    const pageSize = 6; // Número de itens por página
 
     fetchData();
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="card">
 
                             <div onclick="redirectToProductPage('${contents.id}')" class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                                <img src="${contents.imageUrl}" class="img-fluid"> 
+                                <img src="${contents.imageUrl}" class="img-fluid" style="width:400px; heigth:400px"> 
                             </div>
 
                             <div class="card-body">
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetchData();
     }
 
-});
+})
 
 function addToCart(id, name, price, imageUrl) {
     const product = {

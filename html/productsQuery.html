@@ -16,15 +16,9 @@
 
 <body>
   <div class="app-container">
-    <header id="navbar">
-      <!-- Navbar -->
-
-    </header>
-    <!-- sidebar -->
-    <aside class="sidebar" id="sidebar">
-    </aside>
+    <header id="navbar"></header>
+    <aside class="sidebar" id="sidebar"></aside>
     <main>
-      <!-- Seção Hero -->
       <section class="p-5 text-center bg-image" style="background-image: url('/images/joias2.jpg'); height: 600px">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
@@ -39,86 +33,43 @@
 
       <div class="divider-container">
         <hr class="hr hr-blurry divider-line" />
-        <h3 class="divider-text">Veja todos nossos produtos!</h3>
+        <h3 id="title" class="divider-text">Resultados para a pesquisa:</h3>
       </div>
 
 
-      <section class="boxes-container">
-        <!-- Seção de Filtros -->
-        <div class="side-box">
-
-          <!--aqui é o começo de um filtro  -->
-          <div class="divider-containerALT">
-            <h3 class="divider-textALT">Materiais</h3> <!--nome da categoria-->
-          </div>
-          <!-- opção -->
-          <div class="input-group mb-3">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="checkbox" value="" /><!--checkbox da opção-->
-            </div>
-            <h3 class="form-control">Ouro</h3><!--nome da opção-->
-          </div>
-          <!--fim do filtro  -->
-
-          <!--começo de outro filtro com mais opções -->
-          <div class="divider-containerALT">
-            <h3 class="divider-textALT">Tipo</h3> <!--nome da categoria-->
-          </div>
-          <!-- opção -->
-          <div class="input-group mb-3">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="checkbox" value="" /><!--checkbox da opção-->
-            </div>
-            <h3 class="form-control">Anel</h3><!--nome da opção-->
-          </div>
-          <!-- opção -->
-          <div class="input-group mb-3">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="checkbox" value="" /><!--checkbox da opção-->
-            </div>
-            <h3 class="form-control">Brinco</h3><!--nome da opção-->
-          </div>
-          <!-- opção -->
-          <div class="input-group mb-3">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="checkbox" value="" /><!--checkbox da opção-->
-            </div>
-            <h3 class="form-control">Pulseira</h3><!--nome da opção-->
-          </div>
-          <!--fim do filtro  -->
-
-        </div>
-        <!-- Seção de produtos -->
+      <section class="boxes-container" style="margin: auto;">
 
         <div class="products-box">
-          <div id="containerProducts" class="row">
-            <!-- First column -->
-          </div>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div id="containerProducts" class="row"></div>
         </div>
-      </section>
-      
-    </main>
-    <div id="mainContainer">
 
-    </div>
+      </section>
+
+      <div id="page">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+
+    <div id="mainContainer"></div>
+
   </div>
+
   <footer>
     <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
     <div>

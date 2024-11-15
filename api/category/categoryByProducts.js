@@ -28,7 +28,7 @@ function showData(data) {
                         <div class="card">
 
                             <div onclick="redirectToProductPage('${contents.id}')" class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                                <img src="${contents.imageUrl}" class="img-fluid"> 
+                                <img src="${contents.imageUrl}" class="img-fluid" style="width:400px; heigth:400px"> 
                             </div>
 
                             <div class="card-body">

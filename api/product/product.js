@@ -32,14 +32,10 @@ function showData(data) {
             <h5 class="p-title" id="name">${data.name}</h5>
             <p class="p-cash" id="price">R$ ${data.price.toFixed(2)} a vista</p>
             <p class="p-card" id="price_card">R$ ${(data.price / 10).toFixed(2)} x 10 no cartão</p>
+            <p class="p-quantity" id="quantity"><label for="p-quantity"> <b>Quantidade: ${data.quantity}</b></label></p>
             <h5 class="p-info" id="description">Detalhes do produto</h5>
-            <h4 class="p-info" id="description">${data.description}</h4>
             <div class="p-info-container">
-                <p class="p-material" id="material"><label for="p-material"> <b>Material: ${data.material}</b></label></p>
-                <p class="p-size" id="size"><label for="p-size"> <b>Tamanho: ${data.size}</b></label></p>
-                <p class="p-weight" id="weight"><label for="p-weight"> <b>Peso: ${data.weight}</b></label></p>
-                <p class="p-color" id="color"><label for="p-color"> <b>Cor: ${data.color}</b></label></p>
-                <p class="p-quantity" id="quantity"><label for="p-quantity"> <b>Quantidade: ${data.quantity}</b></label></p>
+                <h4 class="p-info" id="description">${data.description}</h4>
             </div>
             <a class="btn btn-primary" onclick="addToCart('${data.id}', '${data.name}', '${data.price}', '${data.imageUrl}')"><i class="fa-solid fa-cart-shopping"></i>Adicionar ao Carrinho</a>
         </div>`
