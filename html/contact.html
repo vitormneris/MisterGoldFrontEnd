@@ -37,8 +37,10 @@
                         <label class="form-label" for="text">Sua mensagem</label>
                     </div>
 
-                    <button data-mdb-ripple-init id="button" type="button" class="btn btn-primary btn-block mb-4">enviar
+                    <div class="buttonSend">
+                    <button data-mdb-ripple-init id="button" type="button" class="buttonSendMessage btn btn-primary btn-block mb-4">enviar
                         mensagem</button>
+                    </div>
                 </form>
                 <div id="status"></div>
             </div>
@@ -55,6 +57,7 @@
     <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
     <script src="/js/navigation.js"></script>
     <script src="/api/message/insertMessage.js"></script>
+    <script src="/js/hidden_objects.js"></script>
 </body>
 
 </html>

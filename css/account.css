@@ -38,3 +38,12 @@
     margin: 20px;
     width: 200px;
 }
+
+.buttonSend {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonSendMessage {
+    width: 300px;
+}

@@ -27,9 +27,7 @@ validationClient(token).then(id => {
     console.log(error)
 })
 
-function showData(client) {
-    console.log(client)
-    
+function showData(client) {    
     const tdEmail = document.getElementById("email")
     tdEmail.value = client.email
     tdEmail.focus()

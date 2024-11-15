@@ -245,3 +245,11 @@ footer{
     margin-top: 30px;
     margin-bottom: 60px;
 }
+
+textarea {
+    resize: none;
+}
+
+i {
+    margin: 5px;
+}

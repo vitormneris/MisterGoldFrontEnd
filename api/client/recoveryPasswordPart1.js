@@ -4,7 +4,7 @@ document.getElementById("button").addEventListener("click", function(e) {
 
     const email = document.getElementById("email").value
 
-    showData("Aguade enquanto fazemos o envio!", "yellow")
+    showData("Aguade enquanto fazemos o envio!", "orange")
     fetch('http://localhost:8084/clientes/' + email + '/recuperacao', {
         method: 'GET'
     })

@@ -28,12 +28,14 @@
                 <label class="form-label" for="name">Nome</label>
               </div>
             </div>
+
             <div class="col">
               <div data-mdb-input-init class="form-outline">
-                <input type="text" id="state" class="form-control" />
-                <label class="form-label" for="state">Estado</label>
+                <input type="text" onkeyup="pesquisacep(this.value)" id="postalCode" class="form-control" />
+                <label class="form-label" for="postalCode">CEP</label>
               </div>
             </div>
+
           </div>
 
           <div class="row mb-4">
@@ -44,19 +46,41 @@
               </div>
             </div>
             <div class="col">
-              <div data-mdb-input-init class="form-outline">
-                <input type="text" id="city" class="form-control" />
-                <label class="form-label" for="city">Cidade</label>
+
+              <div class="row mb-4">
+
+                <div class="col">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="state" class="form-control" />
+                    <label class="form-label" for="state">Estado</label>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="city" class="form-control" />
+                    <label class="form-label" for="city">Cidade</label>
+                  </div>
+                </div>
+
               </div>
+
             </div>
           </div>
+
           <div class="row mb-4">
             <div class="col">
-              <div data-mdb-input-init class="form-outline">
-                <input type="text" id="password" class="form-control" />
-                <label class="form-label" for="password">Senha</label>
+              <div class="input-group">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="password" id="password_first" placeholder="Digite a sua senha" class="form-control" />
+                  <label class="form-label" for="password_first">Sua senha</label>
+                </div>
+                <span id="eyeSpan1" class="input-group-text" style="margin: auto;">
+                  <i id="eye1" class="far fa-eye-slash"></i>
+                </span>
               </div>
             </div>
+
             <div class="col">
               <div data-mdb-input-init class="form-outline">
                 <input type="text" id="neighborhood" class="form-control" />
@@ -67,9 +91,15 @@
 
           <div class="row mb-4">
             <div class="col">
-              <div data-mdb-input-init class="form-outline">
-                <input type="text" id="phone" class="form-control" />
-                <label class="form-label" for="phone">Celular / Telefone</label>
+              <div class="input-group">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="password" id="password_second" placeholder="Digite a sua senha novamente"
+                    class="form-control" />
+                  <label class="form-label" for="password_second">Repita sua senha</label>
+                </div>
+                <span id="eyeSpan2" class="input-group-text" style="margin: auto;">
+                  <i id="eye2" class="far fa-eye-slash"></i>
+                </span>
               </div>
             </div>
             <div class="col">
@@ -81,12 +111,14 @@
           </div>
 
           <div class="row mb-4">
+
             <div class="col">
               <div data-mdb-input-init class="form-outline">
-                <input type="text" onkeyup="pesquisacep(this.value)" id="postalCode" class="form-control" />
-                <label class="form-label" for="postalCode">CEP</label>
+                <input type="text" id="phone" class="form-control" />
+                <label class="form-label" for="phone">Celular / Telefone</label>
               </div>
             </div>
+
             <div class="col">
               <div class="row mb-4">
                 <div class="col">
@@ -136,6 +168,7 @@
   <script src="/js/navigation.js"></script>
   <script src="/js/find_cep.js"></script>
   <script src="/js/hidden_objects.js"></script>
+  <script src="/js/hidden_two_passwords .js"></script>
 </body>
 
 </html>

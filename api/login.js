@@ -26,7 +26,7 @@ document.getElementById("button").addEventListener("click", function(event) {
             localStorage.removeItem("cart")
             window.location.href = document.referrer
         } if (data[1] == 403) {
-            showData("Senha invalida", "red")
+            showData("Senha inválida", "red")
         } else {
             data[0].then(error => showData(error.message, "red"))
         }

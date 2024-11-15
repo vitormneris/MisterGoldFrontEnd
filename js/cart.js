@@ -34,14 +34,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const firstPartConteiner =
         `<div class="form-container">
-            <button  onclick="fecharModal()"><i class="fa-solid fa-trash"></i> FECHAR</button>
-            <h2>Carrinho</h2>
+            <div class="closeButton">
+            <button  onclick="fecharModal()" type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <h2>Carrinho de compras</h2>
             <hr class="hr" />`
 
     const secondtPartConteiner =
            `<hr class="hr" />
-            <h2 class="totalTxt">Total: <span id="cart-total">R$ ${total.toFixed(2)}</span></h2>
-            <a><button id="button" class="btn btn-success w-100">Finalizar Pedido</button></a>
+            <div class="divInfo">
+
+                <label class="form-label" for="totalPrice">Total do pedido</label>
+                <input type="text" id="cart-total" value="R$ ${total.toFixed(2)}" class="inputClass form-control-lg" disabled>
+                <div class="buttonFinish">
+                    <button id="button" class="btn btn-success w-50">Finalizar Pedido</button>
+                </div>
+            </div>
             <div id="status"></div>
         </div>`
 
@@ -72,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             total += itemTotal;
         });
 
-        document.getElementById("cart-total").textContent = formatPrice(total);
+        document.getElementById("cart-total").value = formatPrice(total);
     }
 
 

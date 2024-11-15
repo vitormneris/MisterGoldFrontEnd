@@ -5,11 +5,10 @@
   height: auto;
   justify-content: center;
   text-align: center;
-  /* Centraliza horizontalmente */
   border-radius: 24px;
-  padding: 1rem;
+  padding: 3rem;
   color: var(--bgColor1);
-  margin: 150px auto;
+  margin: 190px auto;
 }
 
 .p-image {

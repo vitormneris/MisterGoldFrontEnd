@@ -58,9 +58,9 @@ function showData(client) {
         const firstPartConteiner = `
             <div class="form-container">
                 <h2>Pedido ${count}</h2>
-                <hr class="hr" />
                 <h3 class="confirmTxt">Por favor, confirme os itens de seu pedido antes de concluir a compra:</h3>
-                <hr class="hr" />`
+                <hr class="hr" />
+                <div class="orderContainer">`
          
         const date = new Date(order.moment);
 
@@ -75,11 +75,18 @@ function showData(client) {
         });
     
         const secondPartConteiner = `
-                <h2 style="color: black; font-size: 25px; margin: 15px">Total do pedido: <span id="totalPrice"  style="color: blue; font-size: 23px">R$ ${order.totalPrice.toFixed(2)}</span></h2>
-                <h2 style="color: black; font-size: 25px; margin: 15px">Momento: <span id="moment" style="color: blue;  font-size: 23px">${formattedDate}</span></h2>
-                <h2 style="color: black; font-size: 25px; margin: 15px">Status do pedido: <span id="orderStatus" style="color: blue;  font-size: 23px">${order.orderMessage}</span></h2>
-    
-                <button class="btn btn-success w-100">Confirmar compra</button>
+
+                <label class="form-label" for="totalPrice">Total do pedido</label>
+                <input type="number" id="totalPrice" value="${order.totalPrice.toFixed(2)}" class="inputClass form-control-lg" disabled>
+                <label class="form-label" for="moment">Momento</label>
+                <input type="text" id="moment" value="${formattedDate}" class="inputClass form-control-lg" disabled>
+                <label class="form-label" for="message">Status do pedido</label>
+                <input type="text" id="message" value="${order.orderMessage}" class="inputClass form-control-lg" disabled>
+
+                </div>
+                <div class="buttonDiv">
+                <button class="btn btn-success w-50">Confirmar compra</button>
+                </div>
             </div>`
     
         mainConteiner.innerHTML += firstPartConteiner + divConteiner.outerHTML + secondPartConteiner

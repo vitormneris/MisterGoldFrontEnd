@@ -2,8 +2,8 @@
 .item-container{
     display: flex;
     flex-direction: row;
-    background-color:var(--bgColor1);
-    padding: 1rem;
+    background-color: rgba(130, 141, 28, 0.4);
+    padding: 1.5rem;
     border-radius: 1rem;
     margin: 1rem;
     justify-content: space-between;
@@ -62,8 +62,11 @@
 .form-container{
     margin-bottom: 10rem;
 }
+
 .confirmTxt{
-    color: var(--bgColor1) !important;
+    margin: 15px;
+    color:  rgb(80, 80, 80) !important;
+    font-size: 25px;
 }
 
 #mainContainer {
@@ -86,4 +89,69 @@
 #mainContainer.ativo {
     visibility: visible;
     opacity: 1;
+}
+
+
+.orderContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.050);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.clientContainer {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.404);
+
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+
+    padding: 20px;
+}
+
+.form-label {
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    font-size: 1.3rem;
+}
+
+.inputClass {
+    color: black;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.closeButton {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+.divInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#button{
+    margin: auto;
+}
+
+.buttonFinish {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.inputClass {
+    width: 500px;
 }

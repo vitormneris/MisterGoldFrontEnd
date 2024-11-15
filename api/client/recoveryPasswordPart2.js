@@ -5,14 +5,14 @@ document.getElementById("button").addEventListener("click", function(e) {
     e.preventDefault()
 
     const code = document.getElementById("code").value
-    const password1 = document.getElementById("password1").value
-    const password2 = document.getElementById("password2").value
+    const password_first = document.getElementById("password_first").value
+    const password_second = document.getElementById("password_second").value
 
 
-    if (password1 === password2) {
+    if (password_first === password_second) {
         recovery = {
             "code": code,
-            "password": password1
+            "password": password_first
         }
     
         fetch('http://localhost:8084/clientes/' + clientEmail + '/recuperacao/codigo', {
@@ -35,11 +35,7 @@ document.getElementById("button").addEventListener("click", function(e) {
             console.log(error)
         });
         
-    } else [
-        showData("As senha digitadas não são iguais", "red")
-
-    ]
-
+    } else showData("As senha digitadas não são iguais", "red")
 
     function showData(text, cl) {
         const divStatus = document.getElementById("status")
