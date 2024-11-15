@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let currentPage = 0; // Página inicial
-    const pageSize = 3; // Número de itens por página
+    let currentPage = 0; 
+    const pageSize = 4; 
 
     fetchData();
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             if (data && data.content) {
                 showData(data);
-                updatePagination(data.totalPages || 1); // Atualiza a paginação
+                updatePagination(data.totalPages || 1); 
             } else {
                 console.log("Nenhum dado encontrado.");
             }

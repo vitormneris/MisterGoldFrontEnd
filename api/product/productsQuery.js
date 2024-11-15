@@ -42,28 +42,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         data.content.forEach(contents => {
             const cardProducts = `
-            <div class="col-lg-4 col-md-12 mb-6 mb-lg-3">
-                <div class="card">
+                <div class="col-lg-4 col-md-12 mb-6 mb-lg-3">
+                    <div class="card">
 
-                    <div onclick="redirectToProductPage('${contents.id}')" class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                        <img src="${contents.imageUrl}" class="img-fluid" style="width:400px; heigth:400px"> 
+                        <div onclick="redirectToProductPage('${contents.id}')" class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="${contents.imageUrl}" class="img-fluid" style="width:400px; heigth:400px"> 
+                        </div>
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">${contents.name}</h5>
+
+                            <div class="category_line_alt"></div>
+
+                            <p class="card-text product-price-cash"> R$ ${contents.price.toFixed(2)} à vista </p>
+
+                            <p class="card-text product-price-card"> 10 x R$ ${(contents.price / 10).toFixed(2)} no cartão </p>
+
+                            <a href="#!" class="btn btn-primary" onclick="addToCart('${contents.id}', '${contents.name}', '${contents.price}', '${contents.imageUrl}')"><i class="fa-solid fa-cart-shopping"></i>+</a>
+
+                        </div>
                     </div>
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">${contents.name}</h5>
-
-                        <div class="category_line_alt"></div>
-
-                        <p class="card-text product-price-cash"> R$ ${contents.price.toFixed(2)} à vista </p>
-
-                        <p class="card-text product-price-card"> 10 x R$ ${(contents.price / 10).toFixed(2)} no cartão </p>
-
-                        <a href="#!" class="btn btn-primary" onclick="addToCart('${contents.id}', '${contents.name}', '${contents.price}', '${contents.imageUrl}')"><i class="fa-solid fa-cart-shopping"></i>+</a>
-
-                    </div>
-                </div>
-            </div>`
+                </div>`
 
             divContainer.innerHTML += cardProducts
         })

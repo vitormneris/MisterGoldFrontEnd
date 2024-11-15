@@ -30,7 +30,7 @@ function showData(data) {
     tdImageUrl.src = data.imageUrl
 
     const tdPrice = document.getElementById("price")
-    tdPrice.value = data.price
+    tdPrice.value = data.price.toFixed(2)
     tdPrice.focus()
 
     const tdDetails = document.getElementById("description")

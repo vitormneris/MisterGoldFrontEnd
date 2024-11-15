@@ -5,6 +5,9 @@ const token = localStorage.getItem("token")
 document.addEventListener("DOMContentLoaded", function(e) {
     document.getElementById("button").addEventListener("click", function (event) {
         event.preventDefault()
+        showData("Aguarde o envio do pedido!", "yellow")
+
+
         let cart = JSON.parse(localStorage.getItem("cart"))
     
         let items = []

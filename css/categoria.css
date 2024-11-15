@@ -51,7 +51,7 @@
     /* border: 2px solid red; */
 }
 
-.category .category-img-top{
+.category .category-img-top {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -61,7 +61,7 @@
     border: 4px solid var(--hlColor1);
 }
 
-.category-text{
+.category-text {
     margin-top: 20px;
     font-size: 1.2rem;
     margin-bottom: 0;
@@ -70,14 +70,14 @@
     color: var(--bgColor2);
 }
 
-.category_line{
+.category_line {
     height: 4px;
     width: 55%;
     background-color: var(--bgColor2);
     border-radius: 35px;
 }
 
-.category_line_alt{
+.category_line_alt {
     height: 4px;
     width: 100%;
     background-color: var(--bgColor1);

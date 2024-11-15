@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mistergold</title>
-    <link rel="stylesheet" href="../node_modules/mdb-ui-kit/css/mdb.min.css" />
+    <title>Bem-vindo ao Mistergold</title>
+    <link rel="stylesheet" href="/node_modules/mdb-ui-kit/css/mdb.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/index.css" />
@@ -36,10 +36,6 @@
                 </div>
             </section>
 
-
-            
-
-
             <div class="title_container">
                 <h1 class="page_title">Categorias</h1>
                 <div class="title_line" aling="center">
@@ -49,7 +45,7 @@
 
             <div class="categories_container">
                 <div class="row" id="containerCategories">
-                
+
                 </div>
             </div>
 
@@ -58,7 +54,6 @@
                 <div class="title_line" aling="center"></div>
             </div>
 
-            <!-- Seção de Produtos -->
             <section class="container">
                 <div class="mb-10 text-center">
                     <div class="row gx-lg-5" id="containerProducts"></div>
@@ -84,39 +79,10 @@
     <script type="module" src="/api/order/orderInsert.js"></script>
     <script src="/js/navigation.js"></script>
     <script src="/js/cart.js"></script>
-
-    <script>
-
-        function redirectToCategoryPage(productId) {
-           window.location.href = `/html/productsByCategory.html?id=${productId}`;
-         }
-
-        function redirectToProductPage(productId) {
-           window.location.href = `/html/product.html?id=${productId}`;
-         }
-
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function(e) {
-            e.preventDefault()
-
-            document.getElementById("searchSend").addEventListener("click", function(e) {
-                let name = document.getElementById("searchName").value
-                window.location.href = "/html/productsQuery.html?name=" + name
-            })
-        })
-    </script>
-
-<script>
-    function abrirModal() {
-        document.getElementById('mainContainer').classList.add('ativo');
-    }
-
-    function fecharModal() {
-        document.getElementById('mainContainer').classList.remove('ativo');
-    }
-</script>
+    <script src="/api/category/categoryByProducts.js"></script>
+    <script src="/api/product/products.js"></script>
+    <script src="/js/search_query.js"></script>
+    <script src="/js/open_close_modal.js"></script>
 </body>
 
 </html>

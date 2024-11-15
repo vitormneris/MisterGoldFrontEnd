@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mistergold</title>
+  <title>Seu perfil</title>
   <link rel="stylesheet" href="/node_modules/mdb-ui-kit/css/mdb.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="/css/main.css" />
@@ -13,19 +13,14 @@
 
 <body>
   <div class="app-container">
-    <header id="navbar">
-      <!-- Navbar -->
+    <header id="navbar"></header>
+    <aside class="sidebar" id="sidebar"></aside>
 
-    </header>
-    <!-- sidebar -->
-    <aside class="sidebar" id="sidebar">
-    </aside>
     <main>
       <div class="form-container">
-        <h2>Perfil</h2>
+        <h2>Seu perfil</h2>
         <hr class="hr" />
         <form>
-          <!-- 2 column grid layout with text inputs for the first and last names -->
           <div class="row mb-4">
             <div class="col">
               <div data-mdb-input-init class="form-outline">
@@ -82,7 +77,8 @@
               <div class="row mb-4">
                 <div class="col">
                   <div data-mdb-input-init class="form-outline">
-                    <input type="number" id="number" min="0" placeholder="Digite o seu numero da casa" class="form-control" />
+                    <input type="number" id="number" min="0" placeholder="Digite o seu numero da casa"
+                      class="form-control" />
                     <label class="form-label" for="number">Nº Casa</label>
                   </div>
                 </div>
@@ -100,7 +96,8 @@
           <div class="row mb-4">
             <div class="col">
               <div data-mdb-input-init class="form-outline">
-                <input type="text" id="postalCode" onkeyup="pesquisacep(this.value)" class="form-control" />
+                <input type="text" id="postalCode" placeholder="Digite o seu CEP" onkeyup="pesquisacep(this.value)"
+                  class="form-control" />
                 <label class="form-label" for="postalCode">CEP</label>
               </div>
             </div>
@@ -108,9 +105,7 @@
             <div class="col">
               <button data-mdb-ripple-init type="button" class="btn btn-warning btn-block mb-4"
                 id="btnEdit">Editar</button>
-
               <div class="row mb-4" id="btn-group" style="display: none;">
-
                 <div class="col">
                   <button data-mdb-ripple-init onclick="toggleEditButtons()" type="button"
                     class="btn btn-danger btn-block mb-4" id="btnCancel">Cancelar</button>
@@ -120,7 +115,6 @@
                   <button data-mdb-ripple-init type="button" class="btn btn-success btn-block mb-4"
                     id="buttonUpdate">Salvar</button>
                 </div>
-
               </div>
             </div>
 
@@ -132,6 +126,7 @@
       </div>
     </main>
   </div>
+
   <footer>
     <p>&copy; 2024 Mistergold. Todos os direitos reservados.</p>
     <div>
@@ -140,61 +135,13 @@
     </div>
   </footer>
 
-  <script>
-
-    function disableButton(logic) {
-      document.getElementById("email").readOnly = logic
-      document.getElementById("state").readOnly = logic
-      document.getElementById("city").readOnly = logic
-      document.getElementById("phone").readOnly = logic
-      document.getElementById("neighborhood").readOnly = logic
-      document.getElementById("street").readOnly = logic
-      document.getElementById("postalCode").readOnly = logic
-      document.getElementById("number").readOnly = logic
-      document.getElementById("complement").readOnly = logic
-      document.getElementById("name").readOnly = logic
-    }
-
-    document.addEventListener("DOMContentLoaded", function (e) {
-      e.preventDefault()
-      disableButton(true)
-    })
-    document.getElementById('btnEdit').addEventListener('click', function () {
-      this.style.display = 'none';
-      document.getElementById('btn-group').style.display = 'flex';
-      disableButton(false)
-    });
-
-    function toggleEditButtons() {
-      document.getElementById('btnEdit').style.display = 'block';
-      document.getElementById('btn-group').style.display = 'none';
-      disableButton(true)
-    }
-  </script>
-
-  <script src="../node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
+  <script src="/node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
   <script type="module" src="/api/client/findClient.js"></script>
   <script type="module" src="/api/client/updateClient.js"></script>
   <script src="/js/navigation.js"></script>
   <script src="/js/find_cep.js"></script>
-
-  <script>
-    document.getElementById("buttonLogOff").addEventListener("click", function (event) {
-      if (window.confirm("Deseja deslogar sua conta?")) {
-        localStorage.removeItem("token")
-        localStorage.removeItem("cart")
-        window.location.href = "/html/login.html"
-      }
-    })
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function (e) {
-      e.preventDefault()
-      document.getElementById("buttonCart").style.display = "none"
-      document.getElementById("searchDiv").style.visibility = "hidden"
-      
-    })
-  </script>
+  <script src="/js/account_config.js"></script>
+  <script src="/js/hidden_objects.js"></script>
 </body>
 
 </html>
