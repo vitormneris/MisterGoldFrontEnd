@@ -15,7 +15,7 @@ document.getElementById("button").addEventListener("click", function(e) {
             "password": password_first
         }
 
-        fetch('http://3.138.179.81:8081/clientes/' + clientEmail + '/recuperacao/codigo', {
+        fetch('http://3.15.223.242:8081/clientes/' + clientEmail + '/recuperacao/codigo', {
             headers: {
                 "Content-Type": "application/json"
             },

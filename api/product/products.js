@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".pagination").addEventListener("click", handlePaginationClick);
 
     function fetchData() {
-        fetch(`http://3.138.179.81:8081/produtos?page=${currentPage}&pageSize=${pageSize}&isActive=true`, {
+        fetch(`http://3.15.223.242:8081/produtos?page=${currentPage}&pageSize=${pageSize}&isActive=true`, {
             method: "GET"
         })
         .then(response => {

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     "items": items
                 }
 
-                fetch('http://3.138.179.81:8081/pedidos/salvar', {
+                fetch('http://3.15.223.242:8081/pedidos/salvar', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

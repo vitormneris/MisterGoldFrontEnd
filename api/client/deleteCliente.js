@@ -10,7 +10,7 @@ document.getElementById("buttonDelete").addEventListener("click", function (e) {
 
 
         validationClient(token).then(id => {
-            fetch('http://3.138.179.81:8081/clientes/' + id + '/deletar', {
+            fetch('http://3.15.223.242:8081/clientes/' + id + '/deletar', {
                 method: "DELETE",
                 headers: {
                     "Authorization": "Bearer " + token

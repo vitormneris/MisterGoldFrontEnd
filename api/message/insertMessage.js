@@ -12,7 +12,7 @@ document.getElementById("button").addEventListener("click", function(event) {
         "text": text
     }
 
-    fetch('http://3.138.179.81:8081/mensagens/salvar', {
+    fetch('http://3.15.223.242:8081/mensagens/salvar', {
         method: "POST",
         headers: { 
             "Content-Type": "application/json"
