@@ -1,6 +1,6 @@
 export async function validationClient(token) {
     try {
-        const response = await fetch('http://3.138.179.81:8084/autorizacao/token/cliente', {
+        const response = await fetch('http://3.138.179.81:8081/autorizacao/token/cliente', {
             method: "GET",
             headers: { 
                 "Authorization": "Bearer " + token
