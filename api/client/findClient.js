@@ -15,6 +15,8 @@ validationClient(token).then(id => {
             return response.json()
         } else if (response.status === 404) {
             window.location.href = "/html/login.html"
+        } else {
+            window.location.href = "/index.html"
         }
     })
     .then(data => {
@@ -28,6 +30,8 @@ validationClient(token).then(id => {
 })
 
 function showData(client) {    
+    if (client == null) window.location.href = "/index.html"
+
     const tdEmail = document.getElementById("email")
     tdEmail.value = client.email
     tdEmail.focus()

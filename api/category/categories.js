@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 0; 
-    const pageSize = 4; 
+    const pageSize = 8; 
 
     fetchData();
 
@@ -53,6 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
     function showData(data) {
         const divContainer = document.getElementById("containerCategories");
         divContainer.innerHTML = "";
+
+        const h1 = document.getElementById("status1")
+
+        if (data.content.length == 0) {
+            h1.style.color = "red"
+            h1.innerText =  "Não há categorias cadastradas!"
+        } else {
+            document.getElementById("divStatus1").style.display = "none"
+        }
 
         data.content.forEach(contents => {
             const cardCategories = `

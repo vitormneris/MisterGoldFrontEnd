@@ -26,7 +26,14 @@ validationClient(token).then(id => {
 })
 
 function showData(client) {
-    console.log(client)
+    const h1 = document.getElementById("status")
+
+    if (client.order.length == 0) {
+        h1.style.color = "red"
+        h1.innerText =  "Nenhum pedido foi feito ainda!"
+    } else {
+        document.getElementById("divStatus").style.display = "none"
+    }
 
     let count = 0
     client.order.forEach(order => {

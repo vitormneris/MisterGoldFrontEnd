@@ -45,8 +45,8 @@ document.getElementById("button").addEventListener("click", function (event) {
             })
             .then(data => {
 
-                if (data[1] == 200) {
-                    showData("Atualizado com sucesso!", "green")
+                if (data[1] == 201) {
+                    showData("Criado com sucesso!", "green")
                 } if (data[1] == 403) {
                     showData("Não autorizado", "red")
                 } else {

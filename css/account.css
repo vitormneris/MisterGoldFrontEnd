@@ -39,6 +39,11 @@
     width: 200px;
 }
 
+#buttonDelete {
+    margin: 20px;
+    width: 200px;
+}
+
 .buttonSend {
     display: flex;
     justify-content: center;

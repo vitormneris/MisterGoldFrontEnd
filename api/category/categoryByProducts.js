@@ -1,6 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const categoryId = urlParams.get('id');
 
+if (categoryId == null || categoryId == "") window.location.href = "/index.html"
+
+
 fetch('http://localhost:8084/categorias/' + categoryId + "/id", {
     headers: {
         "Content-Type": "application/json"

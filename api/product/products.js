@@ -28,7 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showData(data) {
         const divContainer = document.getElementById("containerProducts");
-        divContainer.innerHTML = ""; // Limpa os dados anteriores
+        divContainer.innerHTML = ""; 
+
+        const h1 = document.getElementById("status")
+
+        if (data.content.length == 0) {
+            h1.style.color = "red"
+            h1.innerText =  "Não há produtos cadastrados!"
+        } else {
+            document.getElementById("divStatus").style.display = "none"
+        }
 
         data.content.forEach(contents => {
             const cardProducts = `

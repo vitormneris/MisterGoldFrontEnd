@@ -253,3 +253,15 @@ textarea {
 i {
     margin: 5px;
 }
+
+.statusClass {
+    display: flex;
+    justify-content: center;
+    margin: 200px;
+}
+
+.statusClass h1 {
+    position: absolute;
+}
+
+

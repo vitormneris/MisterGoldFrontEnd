@@ -1,12 +1,13 @@
 const urlParams = new URLSearchParams(window.location.search);
-const productName = urlParams.get('name');
+const productName = urlParams.get('name').trim();
+
+if (productName == null || productName == "") window.location.href = "/index.html"
 
 const title = document.getElementById("title")
 const sp = document.createElement("span")
 sp.style.color = "#facc15"
 sp.innerText += " " + productName
 title.appendChild(sp)
-
 
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 0
@@ -39,6 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
     function showData(data) {
         const divContainer = document.getElementById("containerProducts");
         divContainer.innerHTML = ""
+
+        const h1 = document.getElementById("status")
+
+        if (data.content.length == 0) {
+            h1.style.color = "red"
+            h1.innerText =  "Não foi encontrado resultados para esta pesquisa!"
+        } else {
+            document.getElementById("divStatus").style.display = "none"
+        }
 
         data.content.forEach(contents => {
             const cardProducts = `
