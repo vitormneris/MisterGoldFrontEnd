@@ -3,7 +3,7 @@ import { validationClient } from "../validationClient.js"
 const token = localStorage.getItem("token")
 
 validationClient(token).then(id => {
-    fetch('http://localhost:8084/clientes/' + id + '/id', {
+    fetch('http://3.138.179.81:8084/clientes/' + id + '/id', {
         headers: {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + token

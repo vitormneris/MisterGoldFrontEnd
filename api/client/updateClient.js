@@ -34,7 +34,7 @@ validationClient(token).then(id => {
             }
         }
 
-        fetch('http://localhost:8084/clientes/' + id + '/atualizar', {
+        fetch('http://3.138.179.81:8084/clientes/' + id + '/atualizar', {
             headers: { 
                 "Content-Type": "application/json",
                 "Authorization": "Bearer " + token

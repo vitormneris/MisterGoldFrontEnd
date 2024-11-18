@@ -33,7 +33,7 @@ document.getElementById("button").addEventListener("click", function (event) {
 
     if (password_first == password_second) {
 
-        fetch('http://localhost:8084/clientes/salvar', {
+        fetch('http://3.138.179.81:8084/clientes/salvar', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

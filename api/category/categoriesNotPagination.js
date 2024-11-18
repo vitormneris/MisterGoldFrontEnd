@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(e) {
     e.preventDefault()
 
-    fetch('http://localhost:8084/categorias?page=0&pageSize=10&isActive=true', {
+    fetch('http://3.138.179.81:8084/categorias?page=0&pageSize=10&isActive=true', {
         method: "GET"
     })
     .then(response => {
