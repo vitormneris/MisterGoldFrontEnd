@@ -4,7 +4,7 @@ const categoryId = urlParams.get('id');
 if (categoryId == null || categoryId == "") window.location.href = "/index.html"
 
 
-fetch('http://3.15.223.242:8081/categorias/' + categoryId + "/id", {
+fetch('http://18.227.48.211:8081/categorias/' + categoryId + "/id", {
     headers: {
         "Content-Type": "application/json"
     },
